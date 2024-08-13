@@ -1,4 +1,3 @@
-<!-- contact.jinja -->
 <article class="contact" data-page="contact">
 
   <header>
@@ -17,17 +16,18 @@
 
     <h3 class="h3 form-title">Contact Form</h3>
 
-    <form action="mailto:{{about.email}}" method="POST" class="form" data-form>
+    <form class="form" data-form>
 
       <div class="input-wrapper">
-        <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+        <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
 
-        <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+        <input type="email" id="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
       </div>
 
-      <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+      <textarea id="message" name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-      <button class="form-btn" type="submit" disabled data-form-btn>
+      <!-- Updated button to trigger JavaScript function -->
+      <button class="form-btn" type="button" onclick="validateAndSend()">
         <ion-icon name="paper-plane"></ion-icon>
         <span>Send Message</span>
       </button>
@@ -36,4 +36,39 @@
 
   </section>
 
-</article>
+ <script>
+  function validateAndSend() {
+    // Retrieve user input values
+    var fullname = document.getElementById('fullname').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    // Variable to store error messages
+    var errors = '';
+
+    // Validate inputs
+    if (fullname.length < 5) {
+      errors += 'Please enter a full name with at least 5 characters.\n';
+    }
+    if (!email.includes('@')) {
+      errors += 'Please enter a valid email address.\n';
+    }
+    if (message.length < 10) {
+      errors += 'Please enter a message with at least 10 characters.\n';
+    }
+
+    // If there are errors, display them in a single alert
+    if (errors) {
+      alert(errors);
+      return;
+    }
+
+    // Construct WhatsApp message URL with user input
+    // Add number between 65 and &
+    var whatsappURL = 'https://api.whatsapp.com/send?phone=+651&text=' + encodeURIComponent('Full Name: ' + fullname + '\nEmail: ' + email + '\nMessage: ' + message);
+
+    // Open WhatsApp URL in a new window
+    window.open(whatsappURL, '_blank');
+  }
+</script>
+

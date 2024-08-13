@@ -1,4 +1,3 @@
-<!-- portfolio.jinja -->
 <article class="portfolio" data-page="portfolio">
 
   <header>
@@ -7,19 +6,36 @@
 
   <section class="projects">
 
-    <ul class="filter-list">
+  <ul class="filter-list">
+  <li class="filter-item">
+    <button data-filter-btn>All</button>
+  </li>
+  
+  {% set ordered_categories_row1 = ['Awards & Testimonials', '3D Supply Chain Solutions', '3D Blueprints & Architecture'] %}
+  {% for category in ordered_categories_row1 %}
+  <li class="filter-item">
+    <button data-filter-btn>{{ category }}</button>
+  </li>
+  {% endfor %}
+</ul>
 
-      <li class="filter-item">
-        <button class="active" data-filter-btn>All</button>
-      </li>
+<ul class="filter-list">
+  {% set ordered_categories_row2 = ['Dashboards', 'Databases', 'Spreadsheets'] %}
+  {% for category in ordered_categories_row2 %}
+  <li class="filter-item">
+    <button data-filter-btn>{{ category }}</button>
+  </li>
+  {% endfor %}
+</ul>
 
-      {% for category in categories %}
-      <li class="filter-item">
-        <button data-filter-btn>{{category}}</button>
-      </li>
-      {% endfor %}
-
-    </ul>
+<ul class="filter-list">
+  {% set ordered_categories_row3 = ['Web Development', 'Software & API', 'Game Development'] %}
+  {% for category in ordered_categories_row3 %}
+  <li class="filter-item">
+    <button data-filter-btn>{{ category }}</button>
+  </li>
+  {% endfor %}
+</ul>
 
     <div class="filter-select-box">
 
@@ -34,18 +50,32 @@
       </button>
 
       <ul class="select-list">
+  <li class="select-item">
+    <button data-select-item>All</button>
+  </li>
 
-        <li class="select-item">
-          <button data-select-item>All</button>
-        </li>
+  {% for category in ordered_categories_row1 %}
+  <li class="select-item">
+    <button data-select-item>{{ category }}</button>
+  </li>
+  {% endfor %}
 
-        {% for category in categories %}
-        <li class="select-item">
-          <button data-select-item>{{category}}</button>
-        </li>
-        {% endfor %}
+  <!-- Add a divider or separator here if needed -->
 
-      </ul>
+  {% for category in ordered_categories_row2 %}
+  <li class="select-item">
+    <button data-select-item>{{ category }}</button>
+  </li>
+  {% endfor %}
+
+  {% for category in ordered_categories_row3 %}
+  <li class="select-item">
+    <button data-select-item>{{ category }}</button>
+  </li>
+  {% endfor %}
+  
+</ul>
+
 
     </div>
 
@@ -53,20 +83,20 @@
 
       {% for project in projects.project %}
 
-      <li class="project-item  active" data-filter-item data-category="{{project.category | lower}}">
-        <a href="{{project.url}}" target="_blank">
+      <li class="project-item active" data-filter-item data-category="{{ project.category | lower }}">
+        <a href="{{ project.url }}" target="_blank">
 
           <figure class="project-img">
             <div class="project-item-icon-box">
               <ion-icon name="eye-outline"></ion-icon>
             </div>
 
-            <img src="{{project.image}}" alt="{{project.title}}" loading="lazy">
+            <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
           </figure>
 
-          <h3 class="project-title">{{project.title}}</h3>
+          <h3 class="project-title">{{ project.title }}</h3>
 
-          <p class="project-category">{{project.category}}</p>
+          <p class="project-category">{{ project.category }}</p>
 
         </a>
       </li>

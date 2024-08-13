@@ -5,6 +5,40 @@
     <h2 class="h2 article-title">Resume</h2>
   </header>
 
+    <section class="timeline">
+
+    <div class="title-wrapper">
+      <div class="icon-box">
+        <ion-icon name="briefcase-outline"></ion-icon>
+      </div>
+
+      <h3 class="h3">Experience</h3>
+    </div>
+
+    <ol class="timeline-list">
+
+      {% for experience in resume.experience | sort(attribute='timeline', reverse=true) %}
+
+      <li class="timeline-item">
+
+        <h4 class="h4 timeline-item-title" style="font-size: 20px;">{{experience.title}}</h4>
+
+        <span>{{experience.timeline}} , {{experience.company}}</span>
+        
+
+        <p class="timeline-text" style="margin-bottom: 35px;">
+          {{experience.description}}
+        </p>
+
+      </li>
+
+      {% endfor %}
+
+    </ol>
+
+  </section>
+
+
   <section class="timeline">
 
     <div class="title-wrapper">
@@ -17,15 +51,15 @@
 
     <ol class="timeline-list">
 
-      {% for education in resume.education | reverse %}
+      {% for education in resume.education | sort(attribute='timeline', reverse=true) %}
 
       <li class="timeline-item">
 
-        <h4 class="h4 timeline-item-title">{{education.title}}</h4>
+        <h4 class="h4 timeline-item-title" style="font-size: 20px;">{{education.title}}</h4>
 
-        <span>{{education.timeline}}</span>
+        <span>{{education.timeline}} , {{education.school}}</span>
 
-        <p class="timeline-text">
+        <p class="timeline-text" style="margin-bottom: 35px;">
           {{education.description}}
         </p>
 
@@ -37,37 +71,6 @@
 
   </section>
 
-  <section class="timeline">
-
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
-      </div>
-
-      <h3 class="h3">Experience</h3>
-    </div>
-
-    <ol class="timeline-list">
-
-      {% for experience in resume.experience | reverse %}
-
-      <li class="timeline-item">
-
-        <h4 class="h4 timeline-item-title">{{experience.title}}</h4>
-
-        <span>{{experience.timeline}}</span>
-
-        <p class="timeline-text">
-          {{experience.description}}
-        </p>
-
-      </li>
-
-      {% endfor %}
-
-    </ol>
-
-  </section>
 
   <!-- Languages -->
   {% if resume.languages.enabled %}
