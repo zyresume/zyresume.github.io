@@ -1,37 +1,57 @@
+############## Experience config ################
+#################################################
+
+[[experience]]
+title = "Digital Supply Chain Consultant"
+timeline = "2024"
+company = "Republic Polytechnic, Centre of Innovation"
+description = "Support consultancy projects, research and develop new solutions for companies, innovate digital tools for industry projects and commercialization."
+
+[[experience]]
+title = "Supply Chain Management & Quality Management Professional"
+timeline = "2023"
+company = "TAK Products & Services Pte Ltd"
+description = "Ensure vendor compliance with quality standards, manage ISO certification processes, coordinate audits, conduct Quality Management reviews for returns, and compile Quality Management statistics."
+
+[[experience]]
+title = "Demand Forecaster & Supply Chain Management Professional"
+timeline = "2019"
+company = "EPSON Singapore Pte Ltd"
+description = "Develop demand forecasts at multiple levels of aggregation, implement statistical forecast models, prepare budgets & cost analysis, and plan & teach SAP & VBA lessons for staff."
+
+[[experience]]
+title = "Hardware Quality Assurance Auditor"
+timeline = "2018"
+company = "Pactera Singapore Pte Ltd"
+description = "Run tests & debugging tools to analyse functionality of hardware systems, document defects & run output simulations, present quality audit reports."
+
+
 ############## Education config #################
 #################################################
 [[education]]
-title = "High school of art and design"
-timeline = "2002 — 2004"
-description = "Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur magni dolores eos."
+title = "Bachelor of Science in Digital Supply Chain "
+timeline = "2024 — Present"
+school = "Singapore Institute of Technology"
+description = "Currently studying as a full-time student."
 
 [[education]]
-title = "New york academy of art"
-timeline = "2006 — 2007"
-description = "Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis.."
+title = "Diploma Plus in Business Innovation and Entrepreneurship"
+timeline = "2018 — 2019"
+school = "Republic Polytechnic"
+description = "Studied as a full-time student. Inducted into Director's Roll of Honour. Graduating GPA: 3.00 "
 
 [[education]]
-title = "University school of the arts"
-timeline = "2007 — 2008"
-description = "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
+title = "Diploma in Supply Chain Management"
+timeline = "2017 — 2020"
+school = "Republic Polytechnic"
+description = "Studied as a full-time student. Graduating GPA: 3.48"
 
 
-############## Experience config ################
-#################################################
-[[experience]]
-title = "Web designer"
-timeline = "2010 — 2013"
-description = "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
-
-[[experience]]
-title = "Art director"
-timeline = "2013 — 2015"
-description = "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
-
-[[experience]]
-title = "Creative director"
-timeline = "2015 — Present"
-description = "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas molestias exceptur."
+[[education]]
+title = "Higher Nitec in Event Management"
+timeline = "2015 — 2017"
+school = "Institute of Technical Education (College Central)"
+description = "Studied as a full-time student. Graduating GPA: 3.217"
 
 
 ############## Skills config ####################
@@ -43,20 +63,24 @@ show_bar = true
 show_value = true
 
 [[skill]]
-title = "Web design"
-value = "80%"
-
-[[skill]]
-title = "Graphic design"
-value = "70%"
-
-[[skill]]
-title = "Branding"
+title = "Programming & Automation"
 value = "90%"
 
 [[skill]]
-title = "WordPress"
-value = "50%"
+title = "Software & API"
+value = "70%"
+
+[[skill]]
+title = "Web Development"
+value = "70%"
+
+[[skill]]
+title = "ERP Systems"
+value = "80%"
+
+[[skill]]
+title = "Supply Chain Management, Research & Analysis"
+value = "80%"
 
 ############## Language config ##################
 #################################################
@@ -67,9 +91,9 @@ show_bar = true
 show_value = true
 
 [[language]]
-title = "Ingles"
-value = "60%"
+title = "English"
+value = "80%"
 
 [[language]]
-title = "French"
+title = "Chinese"
 value = "50%"

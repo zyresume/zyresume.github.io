@@ -1,83 +1,280 @@
 [[project]]
-title = "Flutter Cinemapedia App"
-category = "Mobile development"
-image = "https://i.imgur.com/ANDVQ4o.png"
-url = "https://github.com/ivansaul/flutter_cinemapedia_app#screenshots"
+title = "Academic Awards"
+category = "Awards & Testimonials"
+image = "./config/assets/projects/awards.jpg"
+url = "https://drive.google.com/drive/folders/1pCDfs-Pzc30kWDXU_EA7zswG5MTN4lQD?usp=sharing"
 
 [[project]]
-title = "Flutter Coffee Shop App"
-category = "Mobile development"
-image = "https://imgur.com/2nNXhDN.png"
-url = "https://github.com/ivansaul/flutter_coffee_shop_app#screenshots"
+title = "Testimonial from TSH Group Pte Ltd"
+category = "Awards & Testimonials"
+image = "./config/assets/projects/tsh.png"
+url = "https://drive.google.com/file/d/1e1WNxBT9Z_pJosoFVZ5_pZXUO2MJ-MXp/view?usp=sharing"
 
 [[project]]
-title = "Flutter Todo App"
-category = "Mobile development"
-image = "https://imgur.com/7110Lj1.png"
-url = "https://github.com/ivansaul/flutter_todo_app#screenshots"
+title = "Testimonial from Experts Exchange"
+category = "Awards & Testimonials"
+image = "./config/assets/projects/expertsexchange.png"
+url = "https://drive.google.com/file/d/1s2oO2EFdzmUFzzb1JZuzcFmmhVqAsflQ/view?usp=sharing"
 
 [[project]]
-title = "Flutter Travel News App"
-category = "Mobile development"
-image = "https://imgur.com/t5T5Ixa.png"
-url = "https://github.com/ivansaul/flutter_travel_news_app#screenshots"
+title = "Testimonial from Epson Singapore Pte Ltd"
+category = "Awards & Testimonials"
+image = "./config/assets/projects/epson.png"
+url = "https://drive.google.com/file/d/18qfuGxKRcbjC3CN8hwKeckagqtAgf6iB/view?usp=sharing"
 
 [[project]]
-title = "Codigo Facilito Downloader"
-category = "Python Scripting"
-image = "https://imgur.com/kyHrBGk.png"
-url = "https://github.com/ivansaul/codigo_facilito_downloader"
+title = "Backorder Trend Forecasting"
+category = "3D Supply Chain Solutions"
+image = "./config/assets/projects/backorder.png"
+url = "https://github.com/GoodbyeKittyy/Backorder-Trend-Forecasting"
 
 [[project]]
-title = "Finance"
-category = "Web development"
-image = "./config/assets/projects/project-1.jpg"
-url = "https://github.com/ivansaul/flutter_cinemapedia_app#screenshots"
+title = "Order to Delivery KPI Simulation"
+category = "3D Supply Chain Solutions"
+image = "./config/assets/projects/kpi.png"
+url = "https://github.com/GoodbyeKittyy/Order-Creation-to-Delivery-KPI-Simulation"
 
 [[project]]
-title = "Orizon"
-category = "Web development"
-image = "./config/assets/projects/project-2.png"
-url = "https://github.com/ivansaul/flutter_todo_app#screenshots"
+title = "Processor Gantt Chart"
+category = "3D Supply Chain Solutions"
+image = "./config/assets/projects/gantt.png"
+url = "https://github.com/GoodbyeKittyy/Processor-Gantt-Chart"
 
 [[project]]
-title = "Fundo"
-category = "Web design"
-image = "./config/assets/projects/project-3.jpg"
-url = "https://github.com/ivansaul/flutter_cinemapedia_app#screenshots"
+title = "Pallet Mole FIFO System" 
+category = "3D Supply Chain Solutions"
+image = "./config/assets/projects/palletmole.png"
+url = "https://github.com/GoodbyeKittyy/Scalable-Pallet-Mole-FIFO-System"
 
 [[project]]
-title = "Brawlhalla"
-category = "Applications"
-image = "./config/assets/projects/project-4.png"
-url = "https://github.com/ivansaul/flutter_coffee_shop_app#screenshots"
+title = "Warehouse Container Optimization"
+category = "3D Supply Chain Solutions"
+image = "./config/assets/projects/container.png"
+url = "https://github.com/GoodbyeKittyy/Advanced-Warehouse-Container-Fulfillment-Optimizer"
 
 [[project]]
-title = "DSM."
-category = "Web design"
-image = "./config/assets/projects/project-5.png"
-url = "https://github.com/ivansaul/flutter_todo_app#screenshots"
+title = "Elevator Shuttle Rack System"
+category = "3D Supply Chain Solutions"
+image = "./config/assets/projects/elevator.png"
+url = "https://github.com/GoodbyeKittyy/Shuttle-Rack-System-With-Elevator"
 
 [[project]]
-title = "MetaSpark"
-category = "Web design"
-image = "./config/assets/projects/project-6.png"
-url = "https://github.com/ivansaul/flutter_todo_app#screenshots"
+title = "Vertical Conveyor"
+category = "3D Blueprints & Architecture"
+image = "./config/assets/projects/verticalconveyor.jpg"
+url = "https://github.com/GoodbyeKittyy/3D-Vertical-Conveyor-Design"
 
 [[project]]
-title = "Summary"
-category = "Web development"
-image = "./config/assets/projects/project-7.png"
-url = "https://github.com/ivansaul/codigo_facilito_downloader"
+title = "Warehouse"
+category = "3D Blueprints & Architecture"
+image = "./config/assets/projects/warehouse.jpg"
+url = "https://github.com/GoodbyeKittyy/3D-Warehouse-Design"
 
 [[project]]
-title = "Task Manager"
-category = "Applications"
-image = "./config/assets/projects/project-8.jpg"
-url = "https://github.com/ivansaul/flutter_coffee_shop_app#screenshots"
+title = "Office"
+category = "3D Blueprints & Architecture"
+image = "./config/assets/projects/office.jpg"
+url = "https://github.com/GoodbyeKittyy/3D-Office-Design"
 
 [[project]]
-title = "Arrival"
-category = "Web development"
-image = "./config/assets/projects/project-9.png"
-url = "https://github.com/ivansaul/flutter_cinemapedia_app#screenshots"
+title = "Clinic"
+category = "3D Blueprints & Architecture"
+image = "./config/assets/projects/clinic.jpg"
+url = "https://github.com/GoodbyeKittyy/3D-Clinic-Design"
+
+[[project]]
+title = "Business Intelligence (Finance, Sales, Marketing, Supply Chain & Executive)"
+category = "Dashboards"
+image = "./config/assets/projects/intelligence.png"
+url = "https://github.com/GoodbyeKittyy/Business-Intelligence-Dashboard"
+
+[[project]]
+title = "Supply Chain Geographical Analysis (Python Integration)"
+category = "Dashboards"
+image = "./config/assets/projects/geographical.png"
+url = "https://github.com/GoodbyeKittyy/Supply-Chain-Geographical-Analysis-Dashboard-With-Python-Integration"
+
+
+[[project]]
+title = "Inventory Management"
+category = "Dashboards"
+image = "./config/assets/projects/inventory.png"
+url = "https://github.com/GoodbyeKittyy/Inventory-Management-Dashboard"
+
+[[project]]
+title = "Quality Management"
+category = "Dashboards"
+image = "./config/assets/projects/quality.png"
+url = "https://github.com/GoodbyeKittyy/Quality-Management-Dashboard"
+
+[[project]]
+title = "Customer Sales"
+category = "Dashboards"
+image = "./config/assets/projects/customer.png"
+url = "https://github.com/GoodbyeKittyy/Customer-Sales-Dashboard"
+
+[[project]]
+title = "HR Statistics"
+category = "Dashboards"
+image = "./config/assets/projects/hr.png"
+url = "https://github.com/GoodbyeKittyy/HR-Statistics-Dashboard"
+
+[[project]]
+title = "Order Management"
+category = "Databases"
+image = "./config/assets/projects/order.png"
+url = "https://github.com/GoodbyeKittyy/SQL-Integrated-Order-Management-System"
+
+[[project]]
+title = "Invoice Blling Management"
+category = "Databases"
+image = "./config/assets/projects/billing.png"
+url = "https://github.com/GoodbyeKittyy/Time-and-Billing-Management-Database"
+
+[[project]]
+title = "Accounts Ledger Management"
+category = "Databases"
+image = "./config/assets/projects/ledger.png"
+url = "https://github.com/GoodbyeKittyy/Accounts-Ledger-Database"
+
+[[project]]
+title = "Loan Amortization Management"
+category = "Databases"
+image = "./config/assets/projects/amortization.png"
+url = "https://github.com/GoodbyeKittyy/Loan-Amortization-Database"
+
+[[project]]
+title = "Personnel Leave Management"
+category = "Databases"
+image = "./config/assets/projects/staffleave.png"
+url = "https://github.com/GoodbyeKittyy/SQL-Integrated-Staff-Leave-Database"
+
+[[project]]
+title = "Membership History Management"
+category = "Databases"
+image = "./config/assets/projects/membership.png"
+url = "https://github.com/GoodbyeKittyy/Membership-Event-History-Database"
+
+[[project]]
+title = "Triple Exponential Smoothing Forecasting"
+category = "Spreadsheets"
+image = "./config/assets/projects/tripleexpo.png"
+url = "https://github.com/GoodbyeKittyy/Triple-Exponential-Smoothing-Forecasting-Method"
+
+[[project]]
+title = "Various Forecasting Templates "
+category = "Spreadsheets"
+image = "./config/assets/projects/forecasting.png"
+url = "https://github.com/GoodbyeKittyy/Various-Forecasting-Templates"
+
+[[project]]
+title = "Delivery Order and Invoice Data Extractor"
+category = "Spreadsheets"
+image = "./config/assets/projects/doinvoice.png"
+url = "https://github.com/GoodbyeKittyy/Delivery-Order-and-Invoice-Automated-Compiler"
+
+[[project]]
+title = "Accounting Excel VBA Projects"
+category = "Spreadsheets"
+image = "./config/assets/projects/accounting.png"
+url = "https://github.com/GoodbyeKittyy/Accounting-Excel-and-VBA-Work-History"
+
+[[project]]
+title = "Report Automation"
+category = "Spreadsheets"
+image = "./config/assets/projects/report.png"
+url = "https://github.com/GoodbyeKittyy/Report-Automation-with-VBA"
+
+[[project]]
+title = "Smart Attendance Manager"
+category = "Spreadsheets"
+image = "./config/assets/projects/smartattendance.png"
+url = "https://github.com/GoodbyeKittyy/Smart-Attendance-Manager"
+
+[[project]]
+title = "Container Freight and Warehousing Services Website"
+category = "Web Development"
+image = "./config/assets/projects/freight.png"
+url = "https://github.com/GoodbyeKittyy/Container-Freight-and-Warehousing-Services-Website-Template"
+
+[[project]]
+title = "Hotel Website"
+category = "Web Development"
+image = "./config/assets/projects/hotel.png"
+url = "https://github.com/GoodbyeKittyy/Hotel-Website-Template"
+
+
+[[project]]
+title = "Banking Website"
+category = "Web Development"
+image = "./config/assets/projects/banking.png"
+url = "https://github.com/GoodbyeKittyy/Banking-Website-Template"
+
+[[project]]
+title = "Interior Design"
+category = "Web Development"
+image = "./config/assets/projects/interior.png"
+url = "https://github.com/GoodbyeKittyy/Interior-Design-Website"
+
+[[project]]
+title = "Healthy Meal Prep Website"
+category = "Web Development"
+image = "./config/assets/projects/food.png"
+url = "https://github.com/GoodbyeKittyy/Healthy-Meal-Prep-Website-Template"
+
+[[project]]
+title = "Clothing Brand Website"
+category = "Web Development"
+image = "./config/assets/projects/clothing.png"
+url = "https://github.com/GoodbyeKittyy/Clothing-Brand-Website"
+
+
+[[project]]
+title = "Ecommerce Website"
+category = "Web Development"
+image = "./config/assets/projects/ecomm.png"
+url = "https://github.com/GoodbyeKittyy/Ecommerce-Website-Template"
+
+
+[[project]]
+title = "Portfolio Website"
+category = "Web Development"
+image = "./config/assets/projects/portfolio.png"
+url = "https://github.com/GoodbyeKittyy/Portfolio-Website-Template"
+
+
+[[project]]
+title = "POS Accounting and ERP Software"
+category = "Software & API"
+image = "./config/assets/projects/pos.png"
+url = "https://github.com/GoodbyeKittyy/POS-Accounting-and-ERP-Software"
+
+[[project]]
+title = "MS Vulnerability Scanner API"
+category = "Software & API"
+image = "./config/assets/projects/scanner.png"
+url = "https://github.com/GoodbyeKittyy/MS-Vulnerability-Scanner-API"
+
+[[project]]
+title = "Python IDE Software"
+category = "Software & API"
+image = "./config/assets/projects/pyide.png"
+url = "https://github.com/GoodbyeKittyy/Python-IDE-Software"
+
+[[project]]
+title = "Tank Survival"
+category = "Game Development"
+image = "./config/assets/projects/tank.png"
+url = "https://github.com/GoodbyeKittyy/Tank-Survival-Game/tree/master"
+
+[[project]]
+title = "Krunker Inspired FPS"
+category = "Game Development"
+image = "./config/assets/projects/krunker.png"
+url = "https://github.com/GoodbyeKittyy/Krunker-Inspired-Game/tree/master"
+
+[[project]]
+title = "Cookie"
+category = "Game Development"
+image = "./config/assets/projects/cookie.png"
+url = "https://github.com/GoodbyeKittyy/Cookie-Clicker-Replica/tree/master"

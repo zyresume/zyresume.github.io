@@ -1,14 +1,20 @@
-name = "Richard hanrick"
-rol = "Flutter Developer"
-email = "richard@example.com"
-phone = "+1 (213) 352-2795"
-birthday = "June 26, 1996"
-location = "Sacramento, California, USA"
+name = "5y44Ong Zhen Yang"
+rol = "Digital Supply Chain Analyst"
+rol = "Fullstack Developer"
+email = "tobefilled@gmail.com"
+phone = "(+65)"
+birthday = "October 25, 1997"
+location = "Singapore"
 avatar = "./config/assets/avatars/my-avatar.png"
-username = "richardhanrick" # <-- github user name
-googlemaps = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd" 
+username = "GoodbyeKittyy" # <-- github user name
+googlemaps =  "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.661612111953!2d103.848787!3d1.3774334!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da16e96db0a1ab%3A0x3d0be54fbbd6e1cd!2sSingapore%20Institute%20of%20Technology%20(SIT%40NYP)!5e0!3m2!1sen!2ssg!4v1713424726657!5m2!1sen!2ssg"
 presentation = """
-I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.
+I am a Digital Supply Chain Specialist and Fullstack Developer from Singapore. 
 
-My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.
+I am currently enrolled into The Bachelor of Science with Honours in Digital Supply Chain at Singapore Institute of Technology (SIT).
+
+I am competent in Digital Supply Chain Process Optimization and Many Essential Programming Languages, dedicated to serving your Frontend and Backend dynamically.
+
+I enjoy turning complex problems into straightforward solutions with intuitive designs.
+
 """
