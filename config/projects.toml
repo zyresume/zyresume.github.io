@@ -268,7 +268,7 @@ image = "./config/assets/projects/tank.png"
 url = "https://github.com/GoodbyeKittyy/Tank-Survival-Game/tree/master"
 
 [[project]]
-title = "Cookie"
+title = "Cookie Clicker"
 category = "Game Development"
 image = "./config/assets/projects/cookie.png"
 url = "https://github.com/GoodbyeKittyy/Cookie-Clicker-Replica/tree/master"
