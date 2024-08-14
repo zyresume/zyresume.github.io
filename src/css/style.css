@@ -349,7 +349,7 @@ main {
   background: var(--onyx);
   font-size: var(--fs-3); /* Smaller font size */
   font-weight: var(--fw-300);
-  max-width: 200px; /* Adjust this value as needed */
+  max-width: 50px; /* Adjust this value as needed */
   padding: 3px 14px;
   border-radius: 8px;
   white-space: normal; /* Allows text to wrap */
