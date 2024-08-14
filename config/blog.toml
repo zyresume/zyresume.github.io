@@ -19,7 +19,7 @@ category = "Various Courses"
 title = "Great Learning Academy"
 subtitle = "Completed several courses dedicated to Machine Learning specialization. Includes Hierarchical Clustering, Machine Learning Pipeline, Model Deployment in R"
 datetime = "2024"
-image = "./config/assets/posts/greatlearning.jpg"
+image = "./config/assets/posts/greatlearning.png"
 url = "https://drive.google.com/drive/folders/1TzNufZ_qVFKjEWdsn8GAaVlBVwCheQPW?usp=sharing"
 
 [[post]]
