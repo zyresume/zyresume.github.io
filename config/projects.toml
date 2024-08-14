@@ -262,6 +262,30 @@ image = "./config/assets/projects/pyide.png"
 url = "https://github.com/GoodbyeKittyy/Python-IDE-Software"
 
 [[project]]
+title = "Python IDE Software"
+category = "Software & API"
+image = "./config/assets/projects/pyide.png"
+url = "https://github.com/GoodbyeKittyy/Python-IDE-Software"
+
+[[project]]
+title = "Macroeconomic Demand-Forecasting (Neural Network)"
+category = "Machine Learning"
+image = "./config/assets/projects/macroeconomic.png"
+url = "https://github.com/GoodbyeKittyy/Macroeconomic-Variable-Demand-Forecasting-Using-Neural-Network-Prototype"
+
+[[project]]
+title = "Data Analytics for End to End Supply Chain Management"
+category = "Machine Learning"
+image = "./config/assets/projects/endtoend.png"
+url = "https://github.com/GoodbyeKittyy/Data-Analytics-for-End-to-End-Supply-Chain-Management-Prototype"
+
+[[project]]
+title = "Random Forest Classification (Python and Scikit Learn)"
+category = "Machine Learning"
+image = "./config/assets/projects/random.png"
+url = "https://github.com/GoodbyeKittyy/Random-Forest-Classification-with-Python-and-Scikit-Learn"
+
+[[project]]
 title = "Tank Survival"
 category = "Game Development"
 image = "./config/assets/projects/tank.png"
