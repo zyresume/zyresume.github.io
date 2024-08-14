@@ -262,12 +262,6 @@ image = "./config/assets/projects/pyide.png"
 url = "https://github.com/GoodbyeKittyy/Python-IDE-Software"
 
 [[project]]
-title = "Python IDE Software"
-category = "Software & API"
-image = "./config/assets/projects/pyide.png"
-url = "https://github.com/GoodbyeKittyy/Python-IDE-Software"
-
-[[project]]
 title = "Macroeconomic Demand Forecasting (Neural Network)"
 category = "Machine Learning"
 image = "./config/assets/projects/macroeconomic.png"
