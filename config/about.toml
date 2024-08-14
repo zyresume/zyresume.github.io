@@ -6,7 +6,7 @@ birthday = "October 25, 1997"
 location = "Singapore"
 avatar = "./config/assets/avatars/my-avatar.png"
 username = "GoodbyeKittyy" # <-- github user name
-googlemaps =  "https://www.google.com/maps/place/SIT+Punggol+Campus+-+East+Zone+(U%2FC)/@1.4136013,103.910046,17.5z/data=!4m6!3m5!1s0x31da1515bfb2d263:0xc71c56458ac08497!8m2!3d1.4136399!4d103.9122896!16s%2Fg%2F11t42h3wb_?entry=ttu"
+googlemaps =  "https://www.google.com/maps/place/SIT+Punggol+Campus+-+East+Zone+(U%2FC)/@1.4131086,103.9088128,17z/data=!4m6!3m5!1s0x31da1515bfb2d263:0xc71c56458ac08497!8m2!3d1.4136399!4d103.9122896!16s%2Fg%2F11t42h3wb_?entry=ttu"
 presentation = """
 I am a Digital Supply Chain Specialist and Fullstack Developer from Singapore. 
 
