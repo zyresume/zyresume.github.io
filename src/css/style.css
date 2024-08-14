@@ -347,9 +347,9 @@ main {
 .info-content .title {
   color: var(--white-1);
   background: var(--onyx);
-  font-size: var(--fs-3); /* Smaller font size */
+  font-size: 10px; /* Smaller font size */
   font-weight: var(--fw-300);
-  max-width: 50px; /* Adjust this value as needed */
+  max-width: max-content; /* Adjust this value as needed */
   padding: 3px 14px;
   border-radius: 8px;
   white-space: normal; /* Allows text to wrap */
