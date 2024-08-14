@@ -15,6 +15,14 @@ image = "./config/assets/posts/expertsexchange.png"
 url = "https://drive.google.com/drive/folders/1JafV_cCvAdqvu89eWCjcthIQeBsBeAVh?usp=sharing"
 
 [[post]]
+category = "Various Courses"
+title = "Great Learning Academy"
+subtitle = "Completed several courses dedicated to Machine Learning specialization. Includes Hierarchical Clustering, Machine Learning Pipeline, Model Deployment in R"
+datetime = "2024"
+image = "./config/assets/posts/greatlearning.jpg"
+url = "https://drive.google.com/drive/folders/1TzNufZ_qVFKjEWdsn8GAaVlBVwCheQPW?usp=sharing"
+
+[[post]]
 category = "Risk Management Course"
 title = "bizSAFE"
 subtitle = "Trained on the WSH Act and its subsidiary regulations including Workplace Safety and Health (Risk Management) Regulations and Code of Practice on Workplace Safety and Health Risk Management (RMCP)"
@@ -29,3 +37,5 @@ subtitle = "Modules trained include Netweaver, Production Control and Planning, 
 datetime = "2019"
 image = "./config/assets/posts/sap.png"
 url = "https://drive.google.com/file/d/1psVnKKg8F1dzLCsC59hbcxxhF6L4zLzk/view?usp=sharing"
+
+
