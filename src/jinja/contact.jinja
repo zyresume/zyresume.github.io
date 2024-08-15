@@ -14,15 +14,11 @@
 
   <section class="contact-form">
 
-    <h3 class="h3 form-title">Contact Form</h3>
+    <h3 class="h3 form-title">WhatsApp Direct Contact Form</h3>
 
     <form class="form" data-form>
 
       <div class="input-wrapper">
-        <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-        <input type="email" id="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-      </div>
 
       <textarea id="message" name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
@@ -39,20 +35,12 @@
  <script>
   function validateAndSend() {
     // Retrieve user input values
-    var fullname = document.getElementById('fullname').value;
-    var email = document.getElementById('email').value;
     var message = document.getElementById('message').value;
 
     // Variable to store error messages
     var errors = '';
 
-    // Validate inputs
-    if (fullname.length < 5) {
-      errors += 'Please enter a full name with at least 5 characters.\n';
-    }
-    if (!email.includes('@')) {
-      errors += 'Please enter a valid email address.\n';
-    }
+    // Validate message input
     if (message.length < 10) {
       errors += 'Please enter a message with at least 10 characters.\n';
     }
@@ -63,12 +51,10 @@
       return;
     }
 
-    // Construct WhatsApp message URL with user input
-    // Add number between 65 and &
-    var whatsappURL = 'https://api.whatsapp.com/send?phone=+651&text=' + encodeURIComponent('Full Name: ' + fullname + '\nEmail: ' + email + '\nMessage: ' + message);
+    // Construct WhatsApp message URL with the message only
+    var whatsappURL = 'https://api.whatsapp.com/send?phone=+6580137483&text=' + encodeURIComponent('Message: ' + message);
 
     // Open WhatsApp URL in a new window
     window.open(whatsappURL, '_blank');
   }
 </script>
-
