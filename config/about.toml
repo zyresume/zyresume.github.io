@@ -4,7 +4,7 @@ email = "2303279@sit.singaporetech.edu.sg"
 phone = "(+65) 8013 7483"
 birthday = "October 25, 1997"
 location = "Singapore"
-avatar = "./config/assets/avatars/my-avatar.png"
+avatar = "./config/assets/avatars/zhenyang.jpg"
 username = "GoodbyeKittyy" # <-- github user name
 googlemaps = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63818.10390949217!2d103.84932459490926!3d1.397543588831973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1515bfb2d263%3A0xc71c56458ac08497!2sSIT%20Punggol%20Campus%20-%20East%20Zone%20(U%2FC)!5e0!3m2!1sen!2ssg!4v1723616610627!5m2!1sen!2ssg"
 presentation = """
