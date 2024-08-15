@@ -157,3 +157,24 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+function copyToClipboard(text) {
+  // Create a temporary input element to hold the text
+  var tempInput = document.createElement("input");
+  tempInput.style.position = "absolute";
+  tempInput.style.left = "-9999px";
+  tempInput.value = text;
+
+  // Append the input element to the body
+  document.body.appendChild(tempInput);
+
+  // Select the text and copy it to the clipboard
+  tempInput.select();
+  document.execCommand("copy");
+
+  // Remove the temporary input element
+  document.body.removeChild(tempInput);
+
+  // Optionally, you can display a message to indicate that the text has been copied
+  alert(text + " has been copied to clipboard");
+}
