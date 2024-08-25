@@ -5,6 +5,12 @@ image = "./config/assets/projects/awards.jpg"
 url = "https://drive.google.com/drive/folders/1pCDfs-Pzc30kWDXU_EA7zswG5MTN4lQD?usp=sharing"
 
 [[project]]
+title = "Testimonial from Republic Polytechnic (Centre of Innovation)"
+category = "Awards & Testimonials"
+image = "./config/assets/projects/rp.jpg"
+url = "https://drive.google.com/file/d/1cwabyY_IVYx_XIHfm8mHN5B8-ooPvDp1/view?usp=sharing"
+
+[[project]]
 title = "Testimonial from TSH Group Pte Ltd"
 category = "Awards & Testimonials"
 image = "./config/assets/projects/tsh.png"
