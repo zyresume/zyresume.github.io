@@ -29,7 +29,7 @@ end_date = "2019-08"
 title = "Hardware Quality Assurance Auditor"
 timeline = "Nov 2018 — Dec 2018"
 company = "Pactera Singapore Pte Ltd"
-description = "Run tests & debugging tools to analyse functionality of hardware systems, document defects & run output simulations, present quality audit reports. Planned and conducted training sessions on SAP and VBA, enhancing staff competency in data analysis and automation."
+description = "Ran tests and debugging tools on hardware systems using C++ and Python, identifying and documenting defects with a 90% accuracy rate. Collaborated with development teams to address quality issues, reducing defect recurrence by 40%."
 start_date = "2018-11"
 end_date = "2018-12"
 
