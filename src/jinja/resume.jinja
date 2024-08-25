@@ -5,7 +5,7 @@
     <h2 class="h2 article-title">Resume</h2>
   </header>
 
-    <section class="timeline">
+  <section class="timeline">
 
     <div class="title-wrapper">
       <div class="icon-box">
@@ -17,7 +17,7 @@
 
     <ol class="timeline-list">
 
-      {% for experience in resume.experience | sort(attribute='timeline', reverse=true) %}
+      {% for experience in resume.experience | sort(attribute='start_date', reverse=true) %}
 
       <li class="timeline-item">
 
@@ -25,7 +25,6 @@
 
         <span>{{experience.timeline}} , {{experience.company}}</span>
         
-
         <p class="timeline-text" style="margin-bottom: 35px;">
           {{experience.description}}
         </p>
@@ -37,6 +36,8 @@
     </ol>
 
   </section>
+
+
 
 
   <section class="timeline">
