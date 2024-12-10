@@ -27,7 +27,7 @@ Scala = { icon = "./config/assets/icons/scala.png", url = "https://en.wikipedia.
 Typescript = { icon = "./config/assets/icons/typescript.svg", url = "https://en.wikipedia.org/wiki/TypeScript" }
 Actionscript = { icon = "./config/assets/icons/actionscript.svg", url = "https://en.wikipedia.org/wiki/ActionScript" }
 r = { icon = "./config/assets/icons/r.svg", url = "https://en.wikipedia.org/wiki/R_(programming_language)" }
-Lua = { icon = "./config/assets/icons/Lua.png", url = "https://en.wikipedia.org/wiki/Lua_(programming_language)" }
+Lua = { icon = "./config/assets/icons/lua.png", url = "https://en.wikipedia.org/wiki/Lua_(programming_language)" }
 Assembly = { icon = "./config/assets/icons/assembly.svg", url = "https://en.wikipedia.org/wiki/Assembly_language" }
 SAP = { icon = "./config/assets/icons/sap.svg", url = "https://en.wikipedia.org/wiki/SAP_ERP" }
 Oracle = { icon = "./config/assets/icons/oracle.svg", url = "https://en.wikipedia.org/wiki/Oracle_Database" }
