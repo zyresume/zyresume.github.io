@@ -2,6 +2,18 @@
 #################################################
 
 [[experience]]
+title = "Software Engineering & Supply Chain Digital Transformation Intern"
+timeline = "May 2025 — Dec 2025"
+company = "STMicroelectronics Pte Ltd."
+description = """
+- Project Technical Lead of a Multi-AI forecasting system.
+- Developed advanced Excel VBA automation tools to consolidate and standardize fragmented data to streamline integration and upload workflows to SAP systems and Supplier Managed Inventory web interfaces.
+- Improved value-added time by more than 60% across all projects.
+"""
+start_date = "2025-05"
+end_date = "2025-12"
+
+[[experience]]
 title = "Digital Supply Chain Consultant"
 timeline = "May 2024 — Aug 2024"
 company = "Republic Polytechnic, Centre of Innovation"
