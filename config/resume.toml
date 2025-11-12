@@ -6,11 +6,9 @@ title = "Software Engineering & Supply Chain Digital Transformation Intern"
 timeline = "May 2025 — Dec 2025"
 company = "STMicroelectronics Pte Ltd."
 description = """
-<ul>
-    <li>Project Technical Lead of a Multi-AI forecasting system.</li>
-    <li>Developed advanced Excel VBA automation tools to consolidate and standardize fragmented data to streamline integration and upload workflows to SAP systems and Supplier Managed Inventory web interfaces.</li>
-    <li>Improved value-added time by more than 60% across all projects.</li>
-</ul>
+- Project Technical Lead of a Multi-AI forecasting system.
+- Developed advanced Excel VBA automation tools to consolidate and standardize fragmented data to streamline integration and upload workflows to SAP systems and Supplier Managed Inventory web interfaces.
+- Improved value-added time by more than 60% across all projects.
 """
 start_date = "2025-05"
 end_date = "2025-12"
