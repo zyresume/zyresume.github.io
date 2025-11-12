@@ -17,7 +17,10 @@ end_date = "2025-12"
 title = "Digital Supply Chain Consultant"
 timeline = "May 2024 — Aug 2024"
 company = "Republic Polytechnic, Centre of Innovation"
-description = "Supported professional consultancy projects by designing a unique Demand Forecasting VBA application, improving Demand Forecasting speed by 40% and accuracy by 20%."
+description = """
+- Technical Developer and Analyst in Agile teams supporting Supply Chain consultancy projects, developing solutions to enhance client supply chain and logistics capabilities through Process Innovation, Technology Enablement, and Training.
+- Developed a forecasting algorithm which improved the client's Demand Forecasting Speed and Accuracy by 40%.
+"""
 start_date = "2024-05"
 end_date = "2024-08"
 
@@ -25,24 +28,32 @@ end_date = "2024-08"
 title = "Supply Chain Management & Quality Management Professional"
 timeline = "Apr 2023 — June 2023"
 company = "TAK Products & Services Pte Ltd"
-description = "Compiled and analyzed Quality Management statistics using Excel. Managed ISO certification processes, coordinating audits and returns through SAGE 300. KPI of achieving a 100% compliance rate."
-start_date = "2023-04"
+description = """
+- Compiled and analyzed Quality Management statistics using Excel.
+- Managed ISO certification processes, coordinating audits and returns through SAGE 300.
+- KPI of achieving a 100% compliance rate.
+"""start_date = "2023-04"
 end_date = "2023-06"
 
 [[experience]]
 title = "Demand Forecaster & Supply Chain Management Professional"
 timeline = "Mar 2019 — Aug 2019"
 company = "EPSON Singapore Pte Ltd"
-description = "Developed aggregated Demand Forecasts using SAP & Excel in a sandbox environment, improving forecast accuracy by 35%. Prepared budgets and conducted cost analysis, optimizing supply chain costs by 12%. Planned and conducted training sessions on SAP and VBA, enhancing staff competency."
-start_date = "2019-03"
+description = """
+- Developed aggregated Demand Forecasts using SAP & Excel in a sandbox environment, improving forecast accuracy by 35%.
+- Prepared budgets and conducted cost analysis, optimizing supply chain costs by 12%.
+- Planned and conducted training sessions on SAP and VBA, enhancing staff competency.
+"""start_date = "2019-03"
 end_date = "2019-08"
 
 [[experience]]
 title = "Hardware Quality Assurance Auditor"
 timeline = "Nov 2018 — Dec 2018"
 company = "Pactera Singapore Pte Ltd"
-description = "Ran tests and debugging tools on hardware systems using C++ and Python, identifying and documenting defects with a 99% accuracy rate. Collaborated with development teams to address quality issues, reducing defect recurrence by 40%."
-start_date = "2018-11"
+description = """
+- Ran tests and debugging tools on hardware systems using C++ and Python, identifying and documenting defects with a 99% accuracy rate.
+- Collaborated with development teams to address quality issues, reducing defect recurrence by 40%.
+"""start_date = "2018-11"
 end_date = "2018-12"
 
 
@@ -96,7 +107,7 @@ value = "70%"
 
 [[skill]]
 title = "ERP Systems"
-value = "80%"
+value = "70%"
 
 [[skill]]
 title = "Supply Chain Management, Research & Analysis"
