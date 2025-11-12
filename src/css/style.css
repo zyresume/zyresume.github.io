@@ -415,8 +415,9 @@ main {
 }
 
 .contact-info {
-  max-width: calc(100% - 36px);
-  width: calc(100% - 36px);
+  max-width: 100%;
+  width: 100%;
+  flex: 1;
 }
 
 .contact-title {
@@ -1369,8 +1370,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   .contacts-list { gap: 20px; }
 
   .contact-info {
-    max-width: calc(100% - 64px);
-    width: calc(100% - 64px);
+  	max-width: 100%;
+  	width: 100%;
+  	flex: 1;
   }
 
 
