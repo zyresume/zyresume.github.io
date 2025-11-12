@@ -1,4 +1,4 @@
-/*------------------------------------*\
+/*-----------------------------------*\
   #style.css
 \*-----------------------------------*/
 
@@ -319,8 +319,6 @@ main {
   max-height: 112px;
   overflow: hidden;
   transition: var(--transition-2);
-  width: 100%;
-  max-width: 350px; /* Change this value to make it wider */
 }
 
 .sidebar.active { max-height: 405px; }
@@ -415,9 +413,8 @@ main {
 }
 
 .contact-info {
-  max-width: 100%;
-  width: 100%;
-  flex: 1;
+  max-width: calc(100% - 46px);
+  width: calc(100% - 46px);
 }
 
 .contact-title {
@@ -430,10 +427,6 @@ main {
 .contact-info :is(.contact-link, time, address) {
   color: var(--white-2);
   font-size: var(--fs-7);
-  word-break: break-all;
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: clip !important;
 }
 
 .contact-info address { font-style: normal; }
@@ -1301,10 +1294,11 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article {
-  	width: 600px; /* Increase from 520px */
- 	margin-inline: auto;
-  	padding: 30px;
+    width: 520px;
+    margin-inline: auto;
+    padding: 30px;
   }
+
   .article-title {
     font-weight: var(--fw-600);
     padding-bottom: 15px;
@@ -1374,9 +1368,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   .contacts-list { gap: 20px; }
 
   .contact-info {
-  	max-width: 100%;
-  	width: 100%;
-  	flex: 1;
+    max-width: calc(100% - 64px);
+    width: calc(100% - 64px);
   }
 
 
@@ -1574,7 +1567,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * REUSED STYLE
    */
 
-  .sidebar, article { width: 800px; }
+  .sidebar, article { width: 700px; }
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
@@ -1693,7 +1686,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article {
-    width: 1050px;
+    width: 950px;
     box-shadow: var(--shadow-5);
   }
 
@@ -1872,11 +1865,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .contacts-list { grid-template-columns: 1fr; }
 
-/* .contact-info :is(.contact-link) {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-} */
+  .contact-info :is(.contact-link) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
   .contact-info :is(.contact-link, time, address) {
     --fs-7: 14px;
