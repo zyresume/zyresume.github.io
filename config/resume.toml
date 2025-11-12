@@ -32,7 +32,8 @@ description = """
 - Compiled and analyzed Quality Management statistics using Excel.
 - Managed ISO certification processes, coordinating audits and returns through SAGE 300.
 - KPI of achieving a 100% compliance rate.
-"""start_date = "2023-04"
+"""
+start_date = "2023-04"
 end_date = "2023-06"
 
 [[experience]]
@@ -43,7 +44,8 @@ description = """
 - Developed aggregated Demand Forecasts using SAP & Excel in a sandbox environment, improving forecast accuracy by 35%.
 - Prepared budgets and conducted cost analysis, optimizing supply chain costs by 12%.
 - Planned and conducted training sessions on SAP and VBA, enhancing staff competency.
-"""start_date = "2019-03"
+"""
+start_date = "2019-03"
 end_date = "2019-08"
 
 [[experience]]
@@ -53,7 +55,8 @@ company = "Pactera Singapore Pte Ltd"
 description = """
 - Ran tests and debugging tools on hardware systems using C++ and Python, identifying and documenting defects with a 99% accuracy rate.
 - Collaborated with development teams to address quality issues, reducing defect recurrence by 40%.
-"""start_date = "2018-11"
+"""
+start_date = "2018-11"
 end_date = "2018-12"
 
 
