@@ -319,6 +319,8 @@ main {
   max-height: 112px;
   overflow: hidden;
   transition: var(--transition-2);
+  width: 100%;
+  max-width: 350px; /* Change this value to make it wider */
 }
 
 .sidebar.active { max-height: 405px; }
@@ -1294,11 +1296,10 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article {
-    width: 520px;
-    margin-inline: auto;
-    padding: 30px;
+  	width: 600px; /* Increase from 520px */
+ 	margin-inline: auto;
+  	padding: 30px;
   }
-
   .article-title {
     font-weight: var(--fw-600);
     padding-bottom: 15px;
@@ -1567,7 +1568,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * REUSED STYLE
    */
 
-  .sidebar, article { width: 700px; }
+  .sidebar, article { width: 800px; }
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
@@ -1686,7 +1687,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article {
-    width: 950px;
+    width: 1050px;
     box-shadow: var(--shadow-5);
   }
 
