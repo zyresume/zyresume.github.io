@@ -1128,7 +1128,7 @@ transform: scale(1.5);
 \*-----------------------------------*/
 
 #email-link {
-  font-size: 13px; /* Adjust this value - default is var(--fs-7) which is 13px */
+  font-size: 12.5px; /* Adjust this value - default is var(--fs-7) which is 13px */
 }
 
 .mapbox {
