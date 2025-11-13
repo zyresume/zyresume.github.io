@@ -179,16 +179,13 @@ function copyToClipboard(text) {
   alert(text + " has been copied to clipboard");
 }
 
+
 // Auto-scroll testimonials section
 window.addEventListener('load', function() {
   const testimonialsList = document.querySelector('.testimonials-list.has-scrollbar');
-  console.log('Testimonials found:', testimonialsList);
 
   if (testimonialsList) {
     setTimeout(function() {
-      console.log('Testimonials width:', testimonialsList.scrollWidth);
-      console.log('Container width:', testimonialsList.clientWidth);
-      
       let scrollPos = 0;
       let scrollDirection = 1;
       const scrollSpeed = 1;
@@ -196,10 +193,7 @@ window.addEventListener('load', function() {
       function autoScroll() {
         const maxScroll = testimonialsList.scrollWidth - testimonialsList.clientWidth;
         
-        if (maxScroll <= 0) {
-          console.log('Not enough content to scroll');
-          return;
-        }
+        if (maxScroll <= 0) return;
         
         scrollPos += scrollSpeed * scrollDirection;
         
@@ -224,9 +218,6 @@ window.addEventListener('load', function() {
         scrollInterval = setInterval(autoScroll, 20);
       });
       
-      console.log('Testimonials auto-scroll started');
     }, 500);
-  } else {
-    console.log('Testimonials list not found!');
   }
 });
