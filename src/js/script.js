@@ -179,29 +179,29 @@ function copyToClipboard(text) {
   alert(text + " has been copied to clipboard");
 }
 
-// Auto-scroll skills section - FIXED VERSION
+// Auto-scroll testimonials section
 window.addEventListener('load', function() {
   console.log('Page fully loaded');
   
-  const skillsList = document.querySelector('.skills-list');
-  console.log('Skills list found:', skillsList);
+  const testimonialsList = document.querySelector('.testimonials-list');
+  console.log('Testimonials list found:', testimonialsList);
 
-  if (skillsList) {
-    // Wait a bit more to ensure content is rendered
+  if (testimonialsList) {
+    // Wait a bit to ensure content is rendered
     setTimeout(function() {
-      console.log('Skills list width:', skillsList.scrollWidth);
-      console.log('Container width:', skillsList.clientWidth);
+      console.log('Testimonials list width:', testimonialsList.scrollWidth);
+      console.log('Container width:', testimonialsList.clientWidth);
       
       let scrollDirection = 1;
       let scrollAmount = 0;
       let scrollInterval;
       
       function autoScroll() {
-        const maxScroll = skillsList.scrollWidth - skillsList.clientWidth;
+        const maxScroll = testimonialsList.scrollWidth - testimonialsList.clientWidth;
         
         if (maxScroll > 0) {
           scrollAmount += scrollDirection;
-          skillsList.scrollLeft = scrollAmount;
+          testimonialsList.scrollLeft = scrollAmount;
           
           if (scrollAmount >= maxScroll) {
             scrollDirection = -1;
@@ -213,15 +213,16 @@ window.addEventListener('load', function() {
       
       scrollInterval = setInterval(autoScroll, 30);
       
-      skillsList.addEventListener('mouseenter', function() {
+      testimonialsList.addEventListener('mouseenter', function() {
         clearInterval(scrollInterval);
       });
       
-      skillsList.addEventListener('mouseleave', function() {
+      testimonialsList.addEventListener('mouseleave', function() {
         scrollInterval = setInterval(autoScroll, 30);
       });
       
-      console.log('Auto-scroll initialized');
+      console.log('Auto-scroll initialized for testimonials');
     }, 100);
   }
 });
+
