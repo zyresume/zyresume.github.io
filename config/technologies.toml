@@ -1,4 +1,4 @@
-############### Section config ###################
+############### Section config ##################
 #################################################
 title = "Professional Skills Breakdown"
 enabled = true
@@ -23,7 +23,7 @@ skills = [
 [[categories.sections]]
 title = "Methodologies"
 skills = [
-    "Six Sigma Black Belt (In progress)",
+    "Six Sigma Black Belt",
     "Simulation Modelling",
     "Agile Project Management",
     "Sales & Operations Planning (S&OP)"
@@ -37,23 +37,41 @@ color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 title = "Core Languages"
 columns = 2
 skills = [
-    "Python", "TypeScript",
-    "Java", "VBA",
-    "C", "VBScript",
-    "C++", "VB.NET",
-    "C#", "HTML",
-    "JavaScript", "PHP",
-    "", "SQL"
+    "Python", "C#",
+    "Java", "F#",
+    "C", "Objective-C",
+    "C++", "JavaScript",
+    "C--", "TypeScript"
 ]
 
 [[categories.sections]]
-title = "Advanced Languages"
+title = "Microsoft Stack"
+columns = 2
+skills = [
+    "VBA", "VB.NET",
+    "VB", "SQL",
+    "VBScript", ""
+]
+
+[[categories.sections]]
+title = "Web & Scripting"
+columns = 2
+skills = [
+    "HTML", "Shell",
+    "PHP", "Perl",
+    "Ruby", "Lua"
+]
+
+[[categories.sections]]
+title = "Modern & Systems"
 columns = 3
 skills = [
-    "Go", "Dart", "Lua",
-    "Rust", "Kotlin", "Perl",
-    "Ruby", "Scala", "ActionScript",
-    "Swift", "R", "Assembly"
+    "Go", "Julia", "Assembly",
+    "Rust", "Zig", "ActionScript",
+    "Swift", "Elixir", "",
+    "Kotlin", "Erlang", "",
+    "Dart", "R", "",
+    "Scala", "", ""
 ]
 
 [[categories]]
@@ -63,17 +81,23 @@ color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 [[categories.sections]]
 title = "Architecture & Design"
 skills = [
-    "Object-Oriented Programming",
+    "Object-Oriented Programming (OOP)",
+    "Domain-Driven Design (DDD)",
+    "Unified Modelling Language (UML)",
+    "Monolithic Architecture",
     "Microservices Architecture",
-    "Unified Modelling Language",
-    "RESTful APIs"
+    "Serverless Architecture"
 ]
 
 [[categories.sections]]
-title = "DevOps & Cloud"
+title = "Development Practices"
 skills = [
+    "RESTful APIs",
+    "GraphQL",
+    "Fullstack Development",
+    "Cloud Computing",
     "CI/CD Pipelines",
-    "Cloud Computing"
+    "Security Best Practices (OWASP Top 10)"
 ]
 
 [[categories]]
@@ -84,18 +108,29 @@ color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 title = "Web Frameworks"
 columns = 2
 skills = [
-    "Django", "Angular",
-    "Flask", "Node.js",
-    "React.js", "Express"
+    "Django", "Next.js",
+    "Flask", "Express",
+    "FastAPI", "Vue.js",
+    "React.js", ".NET Core",
+    "Angular", "Node.js"
 ]
 
 [[categories.sections]]
-title = "Infrastructure"
+title = "Databases"
+columns = 3
+skills = [
+    "MySQL", "MongoDB", "",
+    "PostgreSQL", "", ""
+]
+
+[[categories.sections]]
+title = "DevOps & Cloud"
 columns = 2
 skills = [
-    "Docker", "PostgreSQL",
-    "AWS", "MongoDB",
-    "GitHub", "TensorFlow"
+    "Docker", "AWS Lambda",
+    "Kubernetes", "Azure",
+    "GitHub Actions", "TensorFlow",
+    "GitLab CI", "PyTorch"
 ]
 
 [[categories]]
@@ -107,14 +142,17 @@ title = "Core AI/ML"
 skills = [
     "Machine Learning",
     "Deep Learning",
-    "Natural Language Processing",
-    "Computer Vision"
+    "Natural Language Processing (NLP)",
+    "Large Language Models",
+    "Computer Vision",
+    "Recommendation Systems"
 ]
 
 [[categories.sections]]
-title = "Specialized"
+title = "Specialized AI"
+columns = 2
 skills = [
-    "Evolutionary Computation",
-    "Fuzzy Logic",
-    "Expert Systems"
+    "Expert Systems", "Fuzzy Logic",
+    "Cognitive Computing", "Evolutionary Computation",
+    "", "Swarm Intelligence"
 ]
