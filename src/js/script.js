@@ -179,45 +179,45 @@ function copyToClipboard(text) {
   alert(text + " has been copied to clipboard");
 }
 
-
-// Auto-scroll testimonials section
+// Auto-scroll testimonials section - Element by Element
 window.addEventListener('load', function() {
   const testimonialsList = document.querySelector('.testimonials-list.has-scrollbar');
 
   if (testimonialsList) {
     setTimeout(function() {
-      let scrollPos = 0;
-      let scrollDirection = 1;
-      const scrollSpeed = 1;
+      const testimonialItems = document.querySelectorAll('.testimonials-item');
+      let currentIndex = 0;
       
-      function autoScroll() {
-        const maxScroll = testimonialsList.scrollWidth - testimonialsList.clientWidth;
+      function scrollToNext() {
+        currentIndex++;
         
-        if (maxScroll <= 0) return;
-        
-        scrollPos += scrollSpeed * scrollDirection;
-        
-        if (scrollPos >= maxScroll) {
-          scrollPos = maxScroll;
-          scrollDirection = -1;
-        } else if (scrollPos <= 0) {
-          scrollPos = 0;
-          scrollDirection = 1;
+        // Loop back to start when reaching the end
+        if (currentIndex >= testimonialItems.length) {
+          currentIndex = 0;
         }
         
-        testimonialsList.scrollLeft = scrollPos;
+        // Scroll to the current testimonial item
+        testimonialItems[currentIndex].scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'start'
+        });
       }
       
-      let scrollInterval = setInterval(autoScroll, 20);
+      // Auto-scroll every 3 seconds (adjust timing as needed)
+      let scrollInterval = setInterval(scrollToNext, 3000);
       
+      // Pause on hover
       testimonialsList.addEventListener('mouseenter', function() {
         clearInterval(scrollInterval);
       });
       
+      // Resume on mouse leave
       testimonialsList.addEventListener('mouseleave', function() {
-        scrollInterval = setInterval(autoScroll, 20);
+        scrollInterval = setInterval(scrollToNext, 3000);
       });
       
     }, 500);
   }
 });
+
