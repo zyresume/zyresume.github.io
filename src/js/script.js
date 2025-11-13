@@ -179,50 +179,56 @@ function copyToClipboard(text) {
   alert(text + " has been copied to clipboard");
 }
 
-// Auto-scroll testimonials section
+// Auto-scroll testimonials section - SIMPLER VERSION
 window.addEventListener('load', function() {
-  console.log('Page fully loaded');
-  
   const testimonialsList = document.querySelector('.testimonials-list');
-  console.log('Testimonials list found:', testimonialsList);
 
   if (testimonialsList) {
-    // Wait a bit to ensure content is rendered
     setTimeout(function() {
-      console.log('Testimonials list width:', testimonialsList.scrollWidth);
-      console.log('Container width:', testimonialsList.clientWidth);
-      
+      let scrollPos = 0;
       let scrollDirection = 1;
-      let scrollAmount = 0;
-      let scrollInterval;
+      const scrollSpeed = 1; // pixels per interval
       
       function autoScroll() {
         const maxScroll = testimonialsList.scrollWidth - testimonialsList.clientWidth;
         
-        if (maxScroll > 0) {
-          scrollAmount += scrollDirection;
-          testimonialsList.scrollLeft = scrollAmount;
-          
-          if (scrollAmount >= maxScroll) {
-            scrollDirection = -1;
-          } else if (scrollAmount <= 0) {
-            scrollDirection = 1;
-          }
+        console.log('Scrolling...Pos:', scrollPos, 'Max:', maxScroll); // Debug
+        
+        if (maxScroll <= 0) {
+          console.log('Not enough content to scroll');
+          return;
         }
+        
+        scrollPos += scrollSpeed * scrollDirection;
+        
+        // Reverse direction at boundaries
+        if (scrollPos >= maxScroll) {
+          scrollPos = maxScroll;
+          scrollDirection = -1;
+        } else if (scrollPos <= 0) {
+          scrollPos = 0;
+          scrollDirection = 1;
+        }
+        
+        testimonialsList.scrollLeft = scrollPos;
       }
       
-      scrollInterval = setInterval(autoScroll, 30);
+      // Start scrolling every 20ms (faster = smoother)
+      let scrollInterval = setInterval(autoScroll, 20);
       
+      // Pause on hover
       testimonialsList.addEventListener('mouseenter', function() {
         clearInterval(scrollInterval);
+        console.log('Paused');
       });
       
+      // Resume on mouse leave
       testimonialsList.addEventListener('mouseleave', function() {
-        scrollInterval = setInterval(autoScroll, 30);
+        scrollInterval = setInterval(autoScroll, 20);
+        console.log('Resumed');
       });
       
-      console.log('Auto-scroll initialized for testimonials');
-    }, 100);
+    }, 500); // Wait 500ms for content to fully render
   }
 });
 
