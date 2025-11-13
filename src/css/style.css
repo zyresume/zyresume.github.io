@@ -579,22 +579,15 @@ main {
 .testimonials-title { margin-bottom: 20px; }
 
 .testimonials-list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 15px;
-  margin: 0 -15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  gap: 20px; /* Space between items */
   padding: 25px 15px;
   padding-bottom: 35px;
-  overflow-x: auto;
-  scroll-behavior: auto; /* Changed from smooth */
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: none; /* Changed from inline mandatory */
 }
 
 .testimonials-item {
-  min-width: 100%;  /* Back to 100% */
-  scroll-snap-align: center;
+  /* Remove min-width */
 }
 
 .testimonials-avatar-box {
