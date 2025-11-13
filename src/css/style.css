@@ -1948,7 +1948,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   padding: 12px;
   border-radius: 10px;
   margin-bottom: 18px;
-  color: var(--smoky-black);
+  color: #000000 !important;
 }
 
 .skill-section {
