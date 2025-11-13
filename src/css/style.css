@@ -576,7 +576,10 @@ main {
 
 .testimonials { margin-bottom: 25px; }
 
-.testimonials-title { margin-bottom: 20px; }
+.testimonials-title { 
+	margin-bottom: 20px; 
+	margin-bottom: 20px; 
+}
 
 .testimonials-list {
   display: grid;
