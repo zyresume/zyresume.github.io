@@ -729,6 +729,14 @@ main {
   line-height: 1.6;
 }
 
+.testimonials::after,
+.testimonials::before,
+.testimonials-list::after,
+.testimonials-list::before {
+  content: none !important;
+  display: none !important;
+}
+
 
 /**
  * #clients 
