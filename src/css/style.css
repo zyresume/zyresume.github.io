@@ -832,6 +832,7 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  margin-top: 5px; /* Add this to reduce top spacing */
 }
 
 
