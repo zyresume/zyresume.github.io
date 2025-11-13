@@ -180,33 +180,31 @@ function copyToClipboard(text) {
 }
 
 
-// Infinite auto-scroll testimonials
+// Infinite conveyor belt testimonials
 window.addEventListener('load', function() {
   const testimonialsList = document.querySelector('.testimonials-list.has-scrollbar');
 
   if (testimonialsList) {
     setTimeout(function() {
-      // Clone all testimonial items and append them for infinite scroll
+      // Clone all testimonial items for seamless loop
       const testimonialItems = Array.from(document.querySelectorAll('.testimonials-item'));
       
-      // Duplicate the items
       testimonialItems.forEach(item => {
         const clone = item.cloneNode(true);
         testimonialsList.appendChild(clone);
       });
       
       let scrollPos = 0;
-      const scrollSpeed = 1; // Adjust speed (pixels per frame)
+      const scrollSpeed = 0.5; // Adjust speed (0.5 = slow, 2 = fast)
       
       function autoScroll() {
         scrollPos += scrollSpeed;
         testimonialsList.scrollLeft = scrollPos;
         
-        // Reset to start when we've scrolled past the original items
-        const maxScroll = testimonialsList.scrollWidth / 2;
-        if (scrollPos >= maxScroll) {
+        // Seamlessly reset when halfway through (where duplicates start)
+        const halfWidth = testimonialsList.scrollWidth / 2;
+        if (scrollPos >= halfWidth) {
           scrollPos = 0;
-          testimonialsList.scrollLeft = 0;
         }
       }
       
@@ -222,6 +220,9 @@ window.addEventListener('load', function() {
         scrollInterval = setInterval(autoScroll, 20);
       });
       
+    }, 500);
+  }
+});
     }, 500);
   }
 });
