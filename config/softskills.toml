@@ -9,12 +9,12 @@ enabled = true # false
 [[skills]]
 title = "Problem Solver"
 icon = "./config/assets/icons/gear.svg"
-text = "Excels in problem-solving by meticulously analyzing challenges, breaking them down into manageable components."
+text = "Excels in addressing Why, How and What Pain Poins, Purposeful Technologies and Productive Solutions suit the user's and business's context.."
 
 [[skills]]
 title = "Timely"
 icon = "./config/assets/icons/user.svg"
-text = "Demonstrates timeliness in all aspects of work while efficiently prioritizing tasks."
+text = "Timeliness in both Agile & SCRUM phases of any project work by efficiently prioritizing tasks."
 
 [[skills]]
 title = "Adaptable & Fast Learner"
@@ -24,4 +24,4 @@ text = "Quickly adjusts to any new project requirements. Constantly goes out of 
 [[skills]]
 title = "Teamwork & Effective Communication"
 icon = "./config/assets/icons/user.svg"
-text = "Contributes to a positive work environment where ideas flourish, productivity improves, and teamwork thrives."
+text = "Contributes to a positive work environment to strive for ideas flourishing, productivity improvement, and teamwork."
