@@ -835,7 +835,14 @@ main {
   margin-top: 5px; /* Add this to reduce top spacing */
 }
 
+.timeline-text * {
+  margin-top: 0;
+  margin-bottom: 3px;
+}
 
+.timeline-text *:last-child {
+  margin-bottom: 0;
+}
 
 /**
  * skills 
