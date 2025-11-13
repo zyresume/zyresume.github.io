@@ -8,6 +8,7 @@ enabled = true
 
 [[categories]]
 name = "SUPPLY CHAIN"
+color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 
 [[categories.sections]]
 title = "Core Competencies"
@@ -30,6 +31,7 @@ skills = [
 
 [[categories]]
 name = "PROGRAMMING"
+color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 
 [[categories.sections]]
 title = "Core Languages"
@@ -56,6 +58,7 @@ skills = [
 
 [[categories]]
 name = "SOFTWARE DEV"
+color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 
 [[categories.sections]]
 title = "Architecture & Design"
@@ -75,6 +78,7 @@ skills = [
 
 [[categories]]
 name = "FRAMEWORKS & TOOLS"
+color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 
 [[categories.sections]]
 title = "Web Frameworks"
@@ -96,6 +100,7 @@ skills = [
 
 [[categories]]
 name = "ARTIFICIAL INTELLIGENCE"
+color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 
 [[categories.sections]]
 title = "Core AI/ML"
