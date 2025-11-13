@@ -128,26 +128,86 @@
   </div>
   {% endif %}
 
-  <!--
-  - clients
+<!--
+  - Professional Skills Breakdown (NEW SECTION - REPLACES OLD CLIENTS)
 -->
 {% if technologies.enabled %}
-<section class="clients">
+<section class="tech-skills">
 
-  <h3 class="h3 service-title">Programming & Software Experience</h3>
+  <h3 class="h3 service-title">{{ technologies.title }}</h3>
 
-  <ul class="clients-list">
-    {% for tech, info in technologies.technologies.items() %}
-    <li class="clients-item">
-      <a href="{{ info.url }}" target="_blank">
-        <img src="{{ info.icon }}" alt="{{ tech }} icon" width="80" height="80">
-        <span style="display: block; text-align: center; color: white; font-size: 18px; margin-top: 5px;">{{ tech }}</span>
-      </a>
-    </li>
+  <div class="skills-grid">
+    {% for category in technologies.categories %}
+    <div class="skill-category">
+      <div class="category-header" style="background: {{ category.color }};">
+        {{ category.name }}
+      </div>
+      
+      {% for section in category.sections %}
+      <div class="skill-section">
+        <div class="section-title">{{ section.title }}</div>
+        
+        {% if section.columns %}
+          {% if section.columns == 2 %}
+          <div class="skill-columns two-col">
+            {% for i in range(0, section.skills|length, 2) %}
+            <div class="skill-col">
+              {% if section.skills[i] %}{{ section.skills[i] }}<br>{% endif %}
+            </div>
+            <div class="skill-col">
+              {% if i + 1 < section.skills|length and section.skills[i + 1] %}{{ section.skills[i + 1] }}<br>{% endif %}
+            </div>
+            {% endfor %}
+          </div>
+          {% elif section.columns == 3 %}
+          <div class="skill-columns three-col">
+            {% set col1 = [] %}
+            {% set col2 = [] %}
+            {% set col3 = [] %}
+            {% for i in range(0, section.skills|length) %}
+              {% if i % 3 == 0 %}
+                {% set _ = col1.append(section.skills[i]) %}
+              {% elif i % 3 == 1 %}
+                {% set _ = col2.append(section.skills[i]) %}
+              {% else %}
+                {% set _ = col3.append(section.skills[i]) %}
+              {% endif %}
+            {% endfor %}
+            
+            <div class="skill-col">
+              {% for skill in col1 %}
+                {% if skill %}{{ skill }}<br>{% endif %}
+              {% endfor %}
+            </div>
+            <div class="skill-col">
+              {% for skill in col2 %}
+                {% if skill %}{{ skill }}<br>{% endif %}
+              {% endfor %}
+            </div>
+            <div class="skill-col">
+              {% for skill in col3 %}
+                {% if skill %}{{ skill }}<br>{% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        {% else %}
+          <div class="skill-list">
+            {% for skill in section.skills %}
+              {{ skill }}<br>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
     {% endfor %}
-  </ul>
+  </div>
 
-
+  <div class="puzzle-container">
+    <div class="puzzle-piece puzzle-left"></div>
+    <div class="puzzle-piece puzzle-right"></div>
+  </div>
 
 </section>
 {% endif %}
