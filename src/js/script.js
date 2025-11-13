@@ -179,33 +179,49 @@ function copyToClipboard(text) {
   alert(text + " has been copied to clipboard");
 }
 
-// Auto-scroll testimonials section - Element by Element
+// Auto-scroll testimonials section - Only when visible
 window.addEventListener('load', function() {
   const testimonialsList = document.querySelector('.testimonials-list.has-scrollbar');
-
+  
   if (testimonialsList) {
     setTimeout(function() {
       const testimonialItems = document.querySelectorAll('.testimonials-item');
       let currentIndex = 0;
+      let scrollInterval;
+      let isScrolling = false;
       
       function scrollToNext() {
-        currentIndex++;
+        // Check if testimonials section is in viewport
+        const rect = testimonialsList.getBoundingClientRect();
+        const isInViewport = (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
         
-        // Loop back to start when reaching the end
-        if (currentIndex >= testimonialItems.length) {
-          currentIndex = 0;
+        // Only scroll if section is visible
+        if (isInViewport) {
+          currentIndex++;
+          
+          if (currentIndex >= testimonialItems.length) {
+            currentIndex = 0;
+          }
+          
+          // Scroll without affecting page position
+          const container = testimonialsList;
+          const targetItem = testimonialItems[currentIndex];
+          const targetLeft = targetItem.offsetLeft - container.offsetLeft;
+          
+          container.scrollTo({
+            left: targetLeft,
+            behavior: 'smooth'
+          });
         }
-        
-        // Scroll to the current testimonial item
-        testimonialItems[currentIndex].scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'start'
-        });
       }
       
-      // Auto-scroll every 3 seconds (adjust timing as needed)
-      let scrollInterval = setInterval(scrollToNext, 3000);
+      // Start auto-scroll
+      scrollInterval = setInterval(scrollToNext, 3000);
       
       // Pause on hover
       testimonialsList.addEventListener('mouseenter', function() {
