@@ -1904,3 +1904,149 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/**
+ * #TECH SKILLS (Professional Skills Breakdown)
+ */
+
+.tech-skills {
+  margin-bottom: 35px;
+}
+
+.tech-skills .service-title {
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.skill-category {
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  background: var(--border-gradient-onyx);
+  position: relative;
+}
+
+.skill-category::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--eerie-black-2);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.category-header {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: var(--fw-600);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  color: var(--white-1);
+}
+
+.skill-section {
+  background: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+.skill-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-500);
+  margin-bottom: 10px;
+  color: var(--white-2);
+  text-align: center;
+}
+
+.skill-list {
+  font-size: var(--fs-6);
+  line-height: 1.8;
+  color: var(--light-gray);
+}
+
+.skill-columns {
+  display: grid;
+  gap: 12px;
+  font-size: var(--fs-6);
+  line-height: 1.8;
+  color: var(--light-gray);
+}
+
+.skill-columns.two-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.skill-columns.three-col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skill-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.puzzle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 10px 0;
+}
+
+.puzzle-piece {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+}
+
+.puzzle-left {
+  background: linear-gradient(135deg, #4a3f7a 0%, #5a3a6a 100%);
+  clip-path: polygon(0% 20%, 15% 20%, 15% 0%, 35% 0%, 35% 20%, 50% 20%, 50% 35%, 70% 35%, 70% 20%, 85% 20%, 85% 0%, 100% 0%, 100% 100%, 85% 100%, 85% 80%, 70% 80%, 70% 65%, 50% 65%, 50% 80%, 35% 80%, 35% 100%, 15% 100%, 15% 80%, 0% 80%);
+  border-radius: 10px;
+}
+
+.puzzle-right {
+  background: linear-gradient(135deg, #2a6a4a 0%, #1a5a3a 100%);
+  clip-path: polygon(0% 20%, 15% 20%, 15% 0%, 35% 0%, 35% 20%, 50% 20%, 50% 35%, 70% 35%, 70% 20%, 85% 20%, 85% 0%, 100% 0%, 100% 100%, 85% 100%, 85% 80%, 70% 80%, 70% 65%, 50% 65%, 50% 80%, 35% 80%, 35% 100%, 15% 100%, 15% 80%, 0% 80%);
+  border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skill-columns.three-col {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .puzzle-piece {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 580px) {
+  .skill-columns.two-col,
+  .skill-columns.three-col {
+    grid-template-columns: 1fr;
+  }
+}
