@@ -219,5 +219,7 @@ window.addEventListener('load', function() {
       setInterval(autoScroll, 20);
       
     }, 500);
+  } else {
+    console.log('Testimonials list NOT found');
   }
-});
+}); // This closing brace was missing!
