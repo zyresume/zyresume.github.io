@@ -179,7 +179,7 @@ function copyToClipboard(text) {
   alert(text + " has been copied to clipboard");
 }
 
-// Auto-scroll testimonials section - Only when visible
+// Auto-scroll testimonials section - Only when user is viewing it
 window.addEventListener('load', function() {
   const testimonialsList = document.querySelector('.testimonials-list.has-scrollbar');
   
@@ -188,49 +188,59 @@ window.addEventListener('load', function() {
       const testimonialItems = document.querySelectorAll('.testimonials-item');
       let currentIndex = 0;
       let scrollInterval;
-      let isScrolling = false;
+      let isUserViewing = false;
+      
+      // Intersection Observer to detect when section is visible
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // User is viewing the section - start scrolling
+            isUserViewing = true;
+            if (!scrollInterval) {
+              scrollInterval = setInterval(scrollToNext, 3000);
+            }
+          } else {
+            // User scrolled away - stop scrolling
+            isUserViewing = false;
+            clearInterval(scrollInterval);
+            scrollInterval = null;
+          }
+        });
+      }, { threshold: 0.5 }); // Trigger when 50% of section is visible
+      
+      observer.observe(testimonialsList);
       
       function scrollToNext() {
-        // Check if testimonials section is in viewport
-        const rect = testimonialsList.getBoundingClientRect();
-        const isInViewport = (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
+        if (!isUserViewing) return;
         
-        // Only scroll if section is visible
-        if (isInViewport) {
-          currentIndex++;
-          
-          if (currentIndex >= testimonialItems.length) {
-            currentIndex = 0;
-          }
-          
-          // Scroll without affecting page position
-          const container = testimonialsList;
-          const targetItem = testimonialItems[currentIndex];
-          const targetLeft = targetItem.offsetLeft - container.offsetLeft;
-          
-          container.scrollTo({
-            left: targetLeft,
-            behavior: 'smooth'
-          });
+        currentIndex++;
+        
+        if (currentIndex >= testimonialItems.length) {
+          currentIndex = 0;
         }
+        
+        // Scroll within container only
+        const targetItem = testimonialItems[currentIndex];
+        const container = testimonialsList;
+        const targetLeft = targetItem.offsetLeft - container.offsetLeft;
+        
+        container.scrollTo({
+          left: targetLeft,
+          behavior: 'smooth'
+        });
       }
-      
-      // Start auto-scroll
-      scrollInterval = setInterval(scrollToNext, 3000);
       
       // Pause on hover
       testimonialsList.addEventListener('mouseenter', function() {
         clearInterval(scrollInterval);
+        scrollInterval = null;
       });
       
-      // Resume on mouse leave
+      // Resume on mouse leave (only if section is still visible)
       testimonialsList.addEventListener('mouseleave', function() {
-        scrollInterval = setInterval(scrollToNext, 3000);
+        if (isUserViewing && !scrollInterval) {
+          scrollInterval = setInterval(scrollToNext, 3000);
+        }
       });
       
     }, 500);
