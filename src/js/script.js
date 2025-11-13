@@ -178,3 +178,43 @@ function copyToClipboard(text) {
   // Optionally, you can display a message to indicate that the text has been copied
   alert(text + " has been copied to clipboard");
 }
+
+// Auto-scroll skills section
+const skillsList = document.querySelector('.skills-list');
+
+if (skillsList) {
+  let scrollDirection = 1; // 1 for right, -1 for left
+  let scrollAmount = 0;
+  let scrollInterval;
+  
+  function autoScroll() {
+    const maxScroll = skillsList.scrollWidth - skillsList.clientWidth;
+    
+    // Only scroll if content is wider than container
+    if (maxScroll > 0) {
+      // Scroll by 1 pixel
+      scrollAmount += scrollDirection;
+      skillsList.scrollLeft = scrollAmount;
+      
+      // Change direction when reaching the end
+      if (scrollAmount >= maxScroll) {
+        scrollDirection = -1;
+      } else if (scrollAmount <= 0) {
+        scrollDirection = 1;
+      }
+    }
+  }
+  
+  // Start auto-scrolling every 30ms (adjust for speed - lower = faster)
+  scrollInterval = setInterval(autoScroll, 30);
+  
+  // Pause on hover
+  skillsList.addEventListener('mouseenter', function() {
+    clearInterval(scrollInterval);
+  });
+  
+  // Resume on mouse leave
+  skillsList.addEventListener('mouseleave', function() {
+    scrollInterval = setInterval(autoScroll, 7);
+  });
+}
