@@ -179,47 +179,44 @@ function copyToClipboard(text) {
   alert(text + " has been copied to clipboard");
 }
 
-// Infinite conveyor belt testimonials
-console.log('Script file loaded!');
-
+// Auto-scroll testimonials section - Element by Element
 window.addEventListener('load', function() {
-  console.log('Window loaded event fired');
-  
-  const testimonialsList = document.querySelector('.testimonials-list');
-  console.log('Found testimonials list:', testimonialsList);
+  const testimonialsList = document.querySelector('.testimonials-list.has-scrollbar');
 
   if (testimonialsList) {
     setTimeout(function() {
-      console.log('Starting infinite scroll setup');
+      const testimonialItems = document.querySelectorAll('.testimonials-item');
+      let currentIndex = 0;
       
-      const testimonialItems = Array.from(document.querySelectorAll('.testimonials-item'));
-      console.log('Testimonial items:', testimonialItems.length);
-      
-      // Clone items
-      testimonialItems.forEach(item => {
-        const clone = item.cloneNode(true);
-        testimonialsList.appendChild(clone);
-      });
-      
-      console.log('Items cloned, starting scroll');
-      
-      let scrollPos = 0;
-      const scrollSpeed = 1;
-      
-      function autoScroll() {
-        scrollPos += scrollSpeed;
-        testimonialsList.scrollLeft = scrollPos;
+      function scrollToNext() {
+        currentIndex++;
         
-        const halfWidth = testimonialsList.scrollWidth / 2;
-        if (scrollPos >= halfWidth) {
-          scrollPos = 0;
+        // Loop back to start when reaching the end
+        if (currentIndex >= testimonialItems.length) {
+          currentIndex = 0;
         }
+        
+        // Scroll to the current testimonial item
+        testimonialItems[currentIndex].scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'start'
+        });
       }
       
-      setInterval(autoScroll, 20);
+      // Auto-scroll every 3 seconds (adjust timing as needed)
+      let scrollInterval = setInterval(scrollToNext, 3000);
+      
+      // Pause on hover
+      testimonialsList.addEventListener('mouseenter', function() {
+        clearInterval(scrollInterval);
+      });
+      
+      // Resume on mouse leave
+      testimonialsList.addEventListener('mouseleave', function() {
+        scrollInterval = setInterval(scrollToNext, 3000);
+      });
       
     }, 500);
-  } else {
-    console.log('Testimonials list NOT found');
   }
-}); // This closing brace was missing!
+});
