@@ -179,7 +179,7 @@ function copyToClipboard(text) {
   alert(text + " has been copied to clipboard");
 }
 
-// Auto-scroll testimonials section - Only when user is viewing it
+// Auto-scroll testimonials section - Completely stop when not viewing
 window.addEventListener('load', function() {
   const testimonialsList = document.querySelector('.testimonials-list.has-scrollbar');
   
@@ -187,31 +187,39 @@ window.addEventListener('load', function() {
     setTimeout(function() {
       const testimonialItems = document.querySelectorAll('.testimonials-item');
       let currentIndex = 0;
-      let scrollInterval;
+      let scrollInterval = null;
       let isUserViewing = false;
+      let isHovering = false;
       
       // Intersection Observer to detect when section is visible
       const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // User is viewing the section - start scrolling
-            isUserViewing = true;
+          isUserViewing = entry.isIntersecting;
+          
+          if (isUserViewing && !isHovering) {
+            // Start scrolling
             if (!scrollInterval) {
               scrollInterval = setInterval(scrollToNext, 3000);
             }
           } else {
-            // User scrolled away - stop scrolling
-            isUserViewing = false;
-            clearInterval(scrollInterval);
-            scrollInterval = null;
+            // Stop scrolling immediately
+            if (scrollInterval) {
+              clearInterval(scrollInterval);
+              scrollInterval = null;
+            }
           }
         });
-      }, { threshold: 0.5 }); // Trigger when 50% of section is visible
+      }, { threshold: 0.3 }); // Trigger when 30% visible
       
       observer.observe(testimonialsList);
       
       function scrollToNext() {
-        if (!isUserViewing) return;
+        // Double-check user is still viewing before scrolling
+        if (!isUserViewing || isHovering) {
+          clearInterval(scrollInterval);
+          scrollInterval = null;
+          return;
+        }
         
         currentIndex++;
         
@@ -222,7 +230,7 @@ window.addEventListener('load', function() {
         // Scroll within container only
         const targetItem = testimonialItems[currentIndex];
         const container = testimonialsList;
-        const targetLeft = targetItem.offsetLeft - container.offsetLeft;
+        const targetLeft = targetItem.offsetLeft;
         
         container.scrollTo({
           left: targetLeft,
@@ -232,12 +240,16 @@ window.addEventListener('load', function() {
       
       // Pause on hover
       testimonialsList.addEventListener('mouseenter', function() {
-        clearInterval(scrollInterval);
-        scrollInterval = null;
+        isHovering = true;
+        if (scrollInterval) {
+          clearInterval(scrollInterval);
+          scrollInterval = null;
+        }
       });
       
-      // Resume on mouse leave (only if section is still visible)
+      // Resume on mouse leave
       testimonialsList.addEventListener('mouseleave', function() {
+        isHovering = false;
         if (isUserViewing && !scrollInterval) {
           scrollInterval = setInterval(scrollToNext, 3000);
         }
