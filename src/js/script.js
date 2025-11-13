@@ -179,20 +179,22 @@ function copyToClipboard(text) {
   alert(text + " has been copied to clipboard");
 }
 
-// Auto-scroll testimonials section - SIMPLER VERSION
+// Auto-scroll testimonials section
 window.addEventListener('load', function() {
-  const testimonialsList = document.querySelector('.testimonials-list');
+  const testimonialsList = document.querySelector('.testimonials-list.has-scrollbar');
+  console.log('Testimonials found:', testimonialsList);
 
   if (testimonialsList) {
     setTimeout(function() {
+      console.log('Testimonials width:', testimonialsList.scrollWidth);
+      console.log('Container width:', testimonialsList.clientWidth);
+      
       let scrollPos = 0;
       let scrollDirection = 1;
-      const scrollSpeed = 1; // pixels per interval
+      const scrollSpeed = 1;
       
       function autoScroll() {
         const maxScroll = testimonialsList.scrollWidth - testimonialsList.clientWidth;
-        
-        console.log('Scrolling...Pos:', scrollPos, 'Max:', maxScroll); // Debug
         
         if (maxScroll <= 0) {
           console.log('Not enough content to scroll');
@@ -201,7 +203,6 @@ window.addEventListener('load', function() {
         
         scrollPos += scrollSpeed * scrollDirection;
         
-        // Reverse direction at boundaries
         if (scrollPos >= maxScroll) {
           scrollPos = maxScroll;
           scrollDirection = -1;
@@ -213,22 +214,19 @@ window.addEventListener('load', function() {
         testimonialsList.scrollLeft = scrollPos;
       }
       
-      // Start scrolling every 20ms (faster = smoother)
       let scrollInterval = setInterval(autoScroll, 20);
       
-      // Pause on hover
       testimonialsList.addEventListener('mouseenter', function() {
         clearInterval(scrollInterval);
-        console.log('Paused');
       });
       
-      // Resume on mouse leave
       testimonialsList.addEventListener('mouseleave', function() {
         scrollInterval = setInterval(autoScroll, 20);
-        console.log('Resumed');
       });
       
-    }, 500); // Wait 500ms for content to fully render
+      console.log('Testimonials auto-scroll started');
+    }, 500);
+  } else {
+    console.log('Testimonials list not found!');
   }
 });
-
