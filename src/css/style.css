@@ -589,7 +589,7 @@ main {
   overflow-x: auto;
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
+  scroll-snap-type: none; /* Changed from inline mandatory */
 }
 
 .testimonials-item {
