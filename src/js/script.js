@@ -180,49 +180,61 @@ function copyToClipboard(text) {
 }
 
 
-// Infinite conveyor belt testimonials
+// Infinite conveyor belt testimonials - DEBUG
 window.addEventListener('load', function() {
+  console.log('Page loaded');
+  
   const testimonialsList = document.querySelector('.testimonials-list.has-scrollbar');
+  console.log('Testimonials list:', testimonialsList);
 
   if (testimonialsList) {
     setTimeout(function() {
-      // Clone all testimonial items for seamless loop
       const testimonialItems = Array.from(document.querySelectorAll('.testimonials-item'));
+      console.log('Original items count:', testimonialItems.length);
       
+      // Clone all testimonial items for seamless loop
       testimonialItems.forEach(item => {
         const clone = item.cloneNode(true);
         testimonialsList.appendChild(clone);
       });
       
+      console.log('After cloning, scroll width:', testimonialsList.scrollWidth);
+      console.log('Container width:', testimonialsList.clientWidth);
+      
       let scrollPos = 0;
-      const scrollSpeed = 0.5; // Adjust speed (0.5 = slow, 2 = fast)
+      const scrollSpeed = 1; // Increased speed for testing
       
       function autoScroll() {
         scrollPos += scrollSpeed;
         testimonialsList.scrollLeft = scrollPos;
         
-        // Seamlessly reset when halfway through (where duplicates start)
+        console.log('Scrolling... Position:', scrollPos);
+        
+        // Seamlessly reset when halfway through
         const halfWidth = testimonialsList.scrollWidth / 2;
         if (scrollPos >= halfWidth) {
+          console.log('Resetting scroll position');
           scrollPos = 0;
         }
       }
       
       let scrollInterval = setInterval(autoScroll, 20);
+      console.log('Scroll interval started');
       
       // Pause on hover
       testimonialsList.addEventListener('mouseenter', function() {
         clearInterval(scrollInterval);
+        console.log('Paused');
       });
       
       // Resume on mouse leave
       testimonialsList.addEventListener('mouseleave', function() {
         scrollInterval = setInterval(autoScroll, 20);
+        console.log('Resumed');
       });
       
     }, 500);
-  }
-});
-    }, 500);
+  } else {
+    console.log('Testimonials list NOT found');
   }
 });
