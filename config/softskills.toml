@@ -9,7 +9,7 @@ enabled = true # false
 [[skills]]
 title = "Problem Solver"
 icon = "./config/assets/icons/gear.svg"
-text = "Excels in addressing Why, How and What Pain Poins, Purposeful Technologies and Productive Solutions suit the user's and business's context.."
+text = "Excels in addressing Why, How and What Pain Poins, Purposeful Technologies and Productive Solutions suit the user's and business's context."
 
 [[skills]]
 title = "Timely"
