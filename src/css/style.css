@@ -1948,7 +1948,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   padding: 12px;
   border-radius: 10px;
   margin-bottom: 18px;
-  color: var(--white-1);
+  background: var(--text-gradient-yellow) !important;
+  color: var(--smoky-black);
 }
 
 .skill-section {
@@ -2025,7 +2026,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
