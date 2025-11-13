@@ -832,17 +832,11 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
-  margin-top: 5px; /* Add this to reduce top spacing */
+  margin-top: 0px; /* Add this to reduce top spacing */
+  margin-bottom: 0; /* Add this */
 }
 
-.timeline-text * {
-  margin-top: 0;
-  margin-bottom: 3px;
-}
 
-.timeline-text *:last-child {
-  margin-bottom: 0;
-}
 
 /**
  * skills 
