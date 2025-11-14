@@ -9,7 +9,11 @@
     <div class="info-content">
       <h1 class="name" title="{{about.name}}">{{about.name}}</h1>
 
-      <p class="title">{{about.rol}}</p>
+      <p class="title">
+        {% for role in about.rol %}
+          {{ role }}{% if not loop.last %}<br>{% endif %}
+        {% endfor %}
+      </p>
 
     </div>
 
