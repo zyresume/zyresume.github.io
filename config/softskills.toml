@@ -7,21 +7,21 @@ enabled = true # false
 #################################################
 
 [[skills]]
-title = "Problem Solver"
+title = "Strategic Problem Solver"
 icon = "./config/assets/icons/gear.svg"
-text = "Excels in addressing Why, How and What Pain Poins, Purposeful Technologies and Productive Solutions suit the user's and business's context."
+text = "Excels in addressing Why, How and What Pain Points, Purposeful Technologies and Productive Solutions suit the user's and business's context."
 
 [[skills]]
-title = "Timely"
+title = "Results-Driven & Agile"
 icon = "./config/assets/icons/user.svg"
 text = "Timeliness in both Agile & SCRUM phases of any project work by efficiently prioritizing tasks."
 
 [[skills]]
-title = "Adaptable & Fast Learner"
+title = "Continuous Learner"
 icon = "./config/assets/icons/comment.svg"
 text = "Quickly adjusts to any new project requirements. Constantly goes out of comfort zone to be a lifelong learner, embracing new technologies and methodologies."
 
 [[skills]]
-title = "Teamwork & Communication"
+title = "Collaborative Worker"
 icon = "./config/assets/icons/user.svg"
 text = "Contributes to a positive work environment to help strive for ideas, productivity improvement, and teamwork."
