@@ -9,19 +9,19 @@ enabled = true # false
 [[skills]]
 title = "Strategic Problem Solver"
 icon = "./config/assets/icons/gear.svg"
-text = "Excels in addressing Why, How and What Pain Points, Purposeful Technologies and Productive Solutions suit the user's and business's context."
+text = "Analyzes the Why, How, and What of user and business pain points to architect purposeful technology solutions that drive meaningful impact."
 
 [[skills]]
 title = "Results-Driven & Agile"
 icon = "./config/assets/icons/user.svg"
-text = "Timeliness in both Agile & SCRUM phases of any project work by efficiently prioritizing tasks."
+text = "Delivers consistent results across Agile & SCRUM workflows through strategic task prioritization and efficient execution."
 
 [[skills]]
 title = "Continuous Learner"
 icon = "./config/assets/icons/comment.svg"
-text = "Quickly adjusts to any new project requirements. Constantly goes out of comfort zone to be a lifelong learner, embracing new technologies and methodologies."
+text = "Embraces challenges beyond comfort zones, rapidly mastering new technologies and methodologies to stay ahead of evolving project requirements."
 
 [[skills]]
 title = "Collaborative Worker"
 icon = "./config/assets/icons/user.svg"
-text = "Contributes to a positive work environment to help strive for ideas, productivity improvement, and teamwork."
+text = "Fosters positive team dynamics through effective communication, knowledge sharing, and collective problem-solving to elevate productivity and innovation."
