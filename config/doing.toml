@@ -1,24 +1,27 @@
 [[doing]]
-title = "Statistical Modeling"
+title = "Supply Chain Digitalization"
 icon = "./config/assets/icons/DataAnalysis.png"
 
-
 [[doing]]
-title = "Automation & Scripting"
-icon = "./config/assets/icons/AutomationScripting.png"
-
-[[doing]]
-title = "Web Development"
-icon = "./config/assets/icons/WebDevelopment.png"
-
-[[doing]]
-title = "Process Optimization"
-icon = "./config/assets/icons/ProcessOptimization.png"
-
-[[doing]]
-title = "Software & API"
+title = "Lean Six Sigma"
 icon = "./config/assets/icons/SoftwareAPI.png"
 
 [[doing]]
-title = "AI Engineering"
+title = "Fullstack Development"
+icon = "./config/assets/icons/AutomationScripting.png"
+
+[[doing]]
+title = "Software Development"
 icon = "./config/assets/icons/AIEngineering.png"
+
+[[doing]]
+title = "AI & ML Engineering"
+icon = "./config/assets/icons/WebDevelopment.png"
+
+[[doing]]
+title = "Enterprise Integration & API"
+icon = "./config/assets/icons/ProcessOptimization.png"
+
+
+
+
