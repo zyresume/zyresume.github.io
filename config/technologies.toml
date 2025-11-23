@@ -115,7 +115,6 @@ skills = [
 
 [[categories.sections]]
 title = "Security"
-columns = 2
 skills = [
     "Security Best Practices (OWASP Top 10)",
     "OAuth 2.0 / OpenID Connect",
@@ -206,12 +205,9 @@ skills = [
 
 [[categories.sections]]
 title = "Advanced Techniques"
-columns = 2
 skills = [
     "Reinforcement Learning",
-    "Graph Neural Networks",
-    "",
-    ""
+    "Graph Neural Networks"
 ]
 
 [[categories.sections]]
@@ -265,7 +261,6 @@ skills = [
 
 [[categories.sections]]
 title = "Advanced Methodologies"
-columns = 2
 skills = [
     "Lean Six Sigma Black Belt",
     "SCOR Model",
@@ -277,7 +272,6 @@ skills = [
 
 [[categories.sections]]
 title = "Digital Supply Chain"
-columns = 2
 skills = [
     "Supply Chain Control Towers",
     "Digital Twin Technology",
@@ -291,7 +285,6 @@ skills = [
 
 [[categories.sections]]
 title = "Emerging Technologies"
-columns = 2
 skills = [
     "Edge Computing",
     "Quantum Computing Basics",
@@ -301,7 +294,6 @@ skills = [
 
 [[categories.sections]]
 title = "Risk & Sustainability"
-columns = 2
 skills = [
     "Supply Chain Risk Management",
     "Trade Compliance & Customs",
@@ -317,7 +309,6 @@ color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 
 [[categories.sections]]
 title = "Design Innovation"
-columns = 2
 skills = [
     "Design Thinking",
     "Human-Centered Design",
@@ -329,7 +320,6 @@ skills = [
 
 [[categories.sections]]
 title = "Project Management"
-columns = 2
 skills = [
     "Agile & Scrum",
     "Kanban",
@@ -341,7 +331,6 @@ skills = [
 
 [[categories.sections]]
 title = "Lean Six Sigma"
-columns = 2
 skills = [
     "Six Sigma Black Belt",
     "DMAIC",
