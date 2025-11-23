@@ -123,7 +123,6 @@ skills = [
 title = "Development Practices"
 skills = [
     "RESTful APIs",
-    "GraphQL",
     "Fullstack Development",
     "Cloud Computing",
     "Continuous Integration and Continuous Deployment (CI/CD) Pipelines (GitHub Actions, Azure DevOps)",
@@ -144,6 +143,16 @@ name = "FRAMEWORKS & TOOLS"
 color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 
 [[categories.sections]]
+title = "Compiler & Toolchain"
+columns = 2
+skills = [
+    "Low Level Virtual Machine (LLVM)",
+    "GNU Compiler Collection (GCC)",
+    "Microsoft Visual C++ (MSVC)",
+    "MinGW"
+]
+
+[[categories.sections]]
 title = "Backend Frameworks"
 columns = 2
 skills = [
@@ -155,54 +164,94 @@ skills = [
     "Spring Boot",
     ".NET Core",
     "ASP.NET",
+    "Laravel",
+    "Ruby on Rails",
     "NestJS",
-    "Gin (Go)"
+    "Gin (Go)",
+    "Fiber (Go)",
+    ""
 ]
 
 [[categories.sections]]
-title = "Frontend Frameworks"
+title = "Frontend Frameworks & Libraries"
 columns = 2
 skills = [
     "React.js",
     "Next.js",
     "Vue.js",
+    "Nuxt.js",
     "Angular",
     "Svelte",
-    "Solid.js"
+    "SvelteKit",
+    "Solid.js",
+    "Remix",
+    "Astro"
 ]
 
 [[categories.sections]]
-title = "Mobile & Other"
-columns = 2
+title = "Mobile Frameworks"
+columns = 3
 skills = [
     "React Native",
     "Flutter",
-    "SwiftUI",
-    ""
+    "SwiftUI"
 ]
 
 [[categories.sections]]
-title = "Databases"
+title = "Relational Databases"
 columns = 3
 skills = [
     "MySQL",
     "PostgreSQL",
     "Microsoft SQL Server",
+    "Oracle Database",
+    "MariaDB",
+    "SQLite"
+]
+
+[[categories.sections]]
+title = "NoSQL Databases"
+columns = 3
+skills = [
     "MongoDB",
-    "SQLite",
+    "",
     ""
 ]
 
 [[categories.sections]]
-title = "Cloud Platforms & Services"
+title = "Data Warehouses & Analytics"
+columns = 3
+skills = [
+    "Azure Synapse",
+    "",
+    ""
+]
+
+[[categories.sections]]
+title = "API & Integration Tools"
 columns = 2
 skills = [
-    "AWS",
-    "Azure",
-    "Google Cloud Platform",
-    "AWS Lambda",
+    "Swagger/OpenAPI",
+    "GraphQL Playground"
+]
+
+[[categories.sections]]
+title = "Cloud Platforms"
+columns = 3
+skills = [
+    "AWS (Amazon Web Services)",
+    "Azure (Microsoft)",
+    "Google Cloud Platform (GCP)"
+]
+
+[[categories.sections]]
+title = "Cloud Services"
+columns = 2
+skills = [
+    "AWS Lambda (Serverless)",
     "Azure App Service",
-    "Google Kubernetes Engine"
+    "Google Cloud Functions",
+    "Google Kubernetes Engine (GKE)"
 ]
 
 [[categories]]
