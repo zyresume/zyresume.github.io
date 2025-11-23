@@ -202,7 +202,7 @@ columns = 3
 skills = [
     "MySQL",
     "PostgreSQL",
-    "Microsoft SQL Server",
+    "Microsoft SQL",
     "Oracle Database",
     "MariaDB",
     "SQLite"
