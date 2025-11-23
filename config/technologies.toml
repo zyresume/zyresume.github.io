@@ -234,7 +234,6 @@ skills = [
 
 [[categories.sections]]
 title = "Cloud Platforms"
-columns = 3
 skills = [
     "AWS (Amazon Web Services)",
     "Azure (Microsoft)",
@@ -243,7 +242,6 @@ skills = [
 
 [[categories.sections]]
 title = "Cloud Services"
-columns = 2
 skills = [
     "AWS Lambda (Serverless)",
     "Azure App Service",
