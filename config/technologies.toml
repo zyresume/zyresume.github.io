@@ -7,75 +7,88 @@ enabled = true
 #################################################
 
 [[categories]]
-name = "SUPPLY CHAIN"
-color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
-
-[[categories.sections]]
-title = "Core Competencies"
-skills = [
-    "Demand Forecasting",
-    "Inventory Management",
-    "Incoterms",
-    "Consignment Planning",
-    "Operations Planning"
-]
-
-[[categories.sections]]
-title = "Methodologies"
-skills = [
-    "Six Sigma Black Belt (In Progress)",
-    "Simulation Modelling (FlexSim)",
-    "Agile Project Management",
-    "Sales & Operations Planning (S&OP)"
-]
-
-[[categories]]
-name = "PROGRAMMING"
+name = "PROGRAMMING LANGUAGES"
 color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 
 [[categories.sections]]
 title = "Core Languages"
 columns = 2
 skills = [
-    "Python", "C#",
-    "Java", "F#",
-    "C", "Objective-C",
-    "C++", "JavaScript",
-    "C--", "TypeScript"
+    "Python",
+    "Java",
+    "C#",
+    "C++",
+    "C",
+    "JavaScript",
+    "TypeScript",
+    ""
 ]
 
 [[categories.sections]]
 title = "Microsoft Stack"
 columns = 2
 skills = [
-    "VBA", "VB.NET",
-    "VB", "SQL",
-    "VBScript", ""
+    "VB.NET",
+    "VBA",
+    "VB",
+    "VBScript",
+    "F#",
+    "Q#"
 ]
 
 [[categories.sections]]
 title = "Web & Scripting"
 columns = 2
 skills = [
-    "HTML", "Shell",
-    "PHP", "Perl",
-    "Ruby", "Lua"
+    "HTML",
+    "PHP",
+    "Ruby",
+    "Perl",
+    "Shell",
+    "Lua",
+    "Google Apps Script",
+    ""
 ]
 
 [[categories.sections]]
 title = "Modern & Systems"
 columns = 3
 skills = [
-    "Go", "Julia", "Assembly",
-    "Rust", "Zig", "ActionScript",
-    "Swift", "Elixir", "",
-    "Kotlin", "Erlang", "",
-    "Dart", "R", "",
-    "Scala", "", ""
+    "Go",
+    "Rust",
+    "Swift",
+    "Kotlin",
+    "Dart",
+    "Scala",
+    "Zig",
+    "",
+    ""
+]
+
+[[categories.sections]]
+title = "Functional & Scientific"
+columns = 3
+skills = [
+    "Haskell",
+    "Elixir",
+    "Erlang",
+    "R",
+    "Julia",
+    "Fortran"
+]
+
+[[categories.sections]]
+title = "Specialized & Database"
+columns = 2
+skills = [
+    "Objective-C",
+    "Assembly",
+    "SQL",
+    "Q (kdb+)"
 ]
 
 [[categories]]
-name = "SOFTWARE DEV"
+name = "SOFTWARE DEVELOPMENT"
 color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 
 [[categories.sections]]
@@ -84,9 +97,9 @@ skills = [
     "Object-Oriented Programming (OOP)",
     "Domain-Driven Design (DDD)",
     "Unified Modelling Language (UML)",
-    "Monolithic Architecture",
     "Microservices Architecture",
-    "Serverless Architecture"
+    "Serverless Architecture",
+    "Event-Driven Architecture"
 ]
 
 [[categories.sections]]
@@ -97,7 +110,17 @@ skills = [
     "Fullstack Development",
     "Cloud Computing",
     "CI/CD Pipelines",
-    "Security Best Practices (OWASP Top 10)"
+    "API Documentation"
+]
+
+[[categories.sections]]
+title = "Security"
+columns = 2
+skills = [
+    "Security Best Practices (OWASP Top 10)",
+    "OAuth 2.0 / OpenID Connect",
+    "Zero Trust Architecture",
+    "Infrastructure as Code (Terraform)"
 ]
 
 [[categories]]
@@ -105,32 +128,65 @@ name = "FRAMEWORKS & TOOLS"
 color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 
 [[categories.sections]]
-title = "Web Frameworks"
+title = "Backend Frameworks"
 columns = 2
 skills = [
-    "Django", "Next.js",
-    "Flask", "Express",
-    "FastAPI", "Vue.js",
-    "React.js", ".NET Core",
-    "Angular", "Node.js"
+    "Django",
+    "Flask",
+    "FastAPI",
+    "Express",
+    "Node.js",
+    "Spring Boot",
+    ".NET Core",
+    "ASP.NET",
+    "NestJS",
+    "Gin (Go)"
+]
+
+[[categories.sections]]
+title = "Frontend Frameworks"
+columns = 2
+skills = [
+    "React.js",
+    "Next.js",
+    "Vue.js",
+    "Angular",
+    "Svelte",
+    "Solid.js"
+]
+
+[[categories.sections]]
+title = "Mobile & Other"
+columns = 2
+skills = [
+    "React Native",
+    "Flutter",
+    "SwiftUI",
+    ""
 ]
 
 [[categories.sections]]
 title = "Databases"
 columns = 3
 skills = [
-    "MySQL", "MongoDB", "",
-    "PostgreSQL", "", ""
+    "MySQL",
+    "PostgreSQL",
+    "Microsoft SQL Server",
+    "MongoDB",
+    "SQLite",
+    ""
 ]
 
 [[categories.sections]]
-title = "DevOps & Cloud"
+title = "Cloud Platforms & Services"
 columns = 2
 skills = [
-    "Docker", "AWS Lambda",
-    "Kubernetes", "Azure",
-    "GitHub Actions", "TensorFlow",
-    "GitLab CI", "PyTorch"
+    "AWS",
+    "Azure",
+    "Google Cloud Platform",
+    "AWS Lambda",
+    "Azure App Service",
+    "Google Kubernetes Engine"
 ]
 
 [[categories]]
@@ -145,14 +201,156 @@ skills = [
     "Natural Language Processing (NLP)",
     "Large Language Models",
     "Computer Vision",
-    "Recommendation Systems"
+    "Time Series Forecasting"
+]
+
+[[categories.sections]]
+title = "Advanced Techniques"
+columns = 2
+skills = [
+    "Reinforcement Learning",
+    "Graph Neural Networks",
+    "",
+    ""
+]
+
+[[categories.sections]]
+title = "Generative AI"
+columns = 2
+skills = [
+    "Prompt Engineering",
+    "LLM Fine-Tuning",
+    "Retrieval-Augmented Generation",
+    "Vector Databases"
 ]
 
 [[categories.sections]]
 title = "Specialized AI"
 columns = 2
 skills = [
-    "Expert Systems", "Fuzzy Logic",
-    "Cognitive Computing", "Evolutionary Computation",
-    "", "Swarm Intelligence"
+    "Expert Systems",
+    "Fuzzy Logic",
+    "Cognitive Computing",
+    "Evolutionary Computation",
+    "Swarm Intelligence",
+    ""
+]
+
+[[categories.sections]]
+title = "AI Frameworks & Tools"
+columns = 2
+skills = [
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-learn",
+    "Hugging Face Transformers",
+    "OpenAI API",
+    "Anthropic Claude API"
+]
+
+[[categories]]
+name = "SUPPLY CHAIN"
+color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
+
+[[categories.sections]]
+title = "Core Competencies"
+skills = [
+    "Demand Forecasting",
+    "Inventory Management",
+    "Incoterms",
+    "Consignment Planning",
+    "Sales & Operations Planning (S&OP)",
+    "Procurement & Supplier Management"
+]
+
+[[categories.sections]]
+title = "Advanced Methodologies"
+columns = 2
+skills = [
+    "Lean Six Sigma Black Belt",
+    "SCOR Model",
+    "Simulation Modelling (FlexSim, AnyLogic)",
+    "Agile Project Management",
+    "Multimodal Transportation",
+    "Mixed-Integer Programming"
+]
+
+[[categories.sections]]
+title = "Digital Supply Chain"
+columns = 2
+skills = [
+    "Supply Chain Control Towers",
+    "Digital Twin Technology",
+    "Prescriptive Analytics",
+    "Blockchain for Supply Chain",
+    "Robotic Process Automation (RPA)",
+    "IoT",
+    "MRP",
+    "ERP Systems (SAP, Oracle, Sage300)"
+]
+
+[[categories.sections]]
+title = "Emerging Technologies"
+columns = 2
+skills = [
+    "Edge Computing",
+    "Quantum Computing Basics",
+    "Low-Code/No-Code Platforms",
+    "Web3 & Decentralized Systems"
+]
+
+[[categories.sections]]
+title = "Risk & Sustainability"
+columns = 2
+skills = [
+    "Supply Chain Risk Management",
+    "Trade Compliance & Customs",
+    "ISO 9001",
+    "ISO 14001",
+    "Sustainability & ESG Metrics",
+    "Circular Economy"
+]
+
+[[categories]]
+name = "OPERATIONAL EXCELLENCE"
+color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
+
+[[categories.sections]]
+title = "Design Innovation"
+columns = 2
+skills = [
+    "Design Thinking",
+    "Human-Centered Design",
+    "User Personas",
+    "Customer Journey Mapping",
+    "TRIZ",
+    "Rapid Prototyping"
+]
+
+[[categories.sections]]
+title = "Project Management"
+columns = 2
+skills = [
+    "Agile & Scrum",
+    "Kanban",
+    "Risk Management",
+    "Stakeholder Management",
+    "Change Management",
+    "Gantt Charts"
+]
+
+[[categories.sections]]
+title = "Lean Six Sigma"
+columns = 2
+skills = [
+    "Six Sigma Black Belt",
+    "DMAIC",
+    "Value Stream Mapping",
+    "5S Methodology",
+    "Kaizen",
+    "Root Cause Analysis",
+    "5 Whys Analysis",
+    "Fishbone Diagram",
+    "Statistical Process Control",
+    "Just-In-Time (JIT)"
 ]
