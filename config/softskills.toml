@@ -5,23 +5,22 @@ enabled = true # false
 
 ################ Skills #########################
 #################################################
-
 [[skills]]
-title = "Strategic Problem Solver"
+title = "Critical Problem Solver"
 icon = "./config/assets/icons/gear.svg"
-text = "Analyzes the Why, How, and What of user and business pain points to architect purposeful technology solutions that drive meaningful impact."
+text = "Analyzes the Why, How and What of user and business challenges to architect purposeful technology solutions that deliver measurable impact."
 
 [[skills]]
-title = "Results-Driven & Agile"
+title = "Agile Project Execution"
 icon = "./config/assets/icons/bolt.svg"
-text = "Delivers consistent results across Agile & SCRUM workflows through strategic task prioritization and efficient execution."
+text = "Delivers consistent and timely results across Agile and SCRUM workflows through strategic task prioritization and efficient execution."
 
 [[skills]]
 title = "Continuous Learner"
 icon = "./config/assets/icons/comment.svg"
-text = "Embraces challenges beyond comfort zones, rapidly mastering new technologies and methodologies to stay ahead of evolving project requirements."
+text = "Embraces challenges beyond comfort zones and rapidly master new technologies and methodologies to stay ahead of evolving project requirements."
 
 [[skills]]
-title = "Collaborative Worker"
+title = "Collaborative Team Player"
 icon = "./config/assets/icons/user.svg"
-text = "Fosters positive team dynamics through effective communication, knowledge sharing, and collective problem-solving to elevate productivity and innovation."
+text = "Excels in effective communication, knowledge sharing, and collective problem-solving to elevate team productivity and innovation."
