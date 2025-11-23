@@ -144,7 +144,6 @@ color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 
 [[categories.sections]]
 title = "Compiler & Toolchain"
-columns = 2
 skills = [
     "Low Level Virtual Machine (LLVM)",
     "GNU Compiler Collection (GCC)",
@@ -278,7 +277,6 @@ skills = [
 
 [[categories.sections]]
 title = "Generative AI"
-columns = 2
 skills = [
     "Prompt Engineering",
     "LLM Fine-Tuning",
@@ -288,19 +286,16 @@ skills = [
 
 [[categories.sections]]
 title = "Specialized AI"
-columns = 2
 skills = [
     "Expert Systems",
     "Fuzzy Logic",
     "Cognitive Computing",
     "Evolutionary Computation",
-    "Swarm Intelligence",
-    ""
+    "Swarm Intelligence"
 ]
 
 [[categories.sections]]
 title = "AI Frameworks & Tools"
-columns = 2
 skills = [
     "TensorFlow",
     "PyTorch",
