@@ -78,11 +78,24 @@ skills = [
 ]
 
 [[categories.sections]]
-title = "Specialized & Database"
-columns = 2
+title = "Specialized & Niche"
+columns = 3
 skills = [
     "Objective-C",
+    "C--",
+    "C*",
+    "Cython",
     "Assembly",
+    "ActionScript",
+    "Pascal",
+    "GDScript",
+    "Scratch"
+]
+
+[[categories.sections]]
+title = "Database & Query Languages"
+columns = 2
+skills = [
     "SQL",
     "Q (kdb+)"
 ]
@@ -97,9 +110,13 @@ skills = [
     "Object-Oriented Programming (OOP)",
     "Domain-Driven Design (DDD)",
     "Unified Modelling Language (UML)",
+    "Monolithic Architecture",
     "Microservices Architecture",
     "Serverless Architecture",
-    "Event-Driven Architecture"
+    "Event-Driven Architecture",
+    "Command Query Responsibility Segregation (CQRS)",
+    "Service Mesh",
+    "API Gateway Patterns"
 ]
 
 [[categories.sections]]
@@ -109,7 +126,7 @@ skills = [
     "GraphQL",
     "Fullstack Development",
     "Cloud Computing",
-    "CI/CD Pipelines",
+    "Continuous Integration and Continuous Deployment (CI/CD) Pipelines (GitHub Actions, Azure DevOps)",
     "API Documentation"
 ]
 
@@ -119,7 +136,7 @@ skills = [
     "Security Best Practices (OWASP Top 10)",
     "OAuth 2.0 / OpenID Connect",
     "Zero Trust Architecture",
-    "Infrastructure as Code (Terraform)"
+    "Infrastructure as Code (IaC) (Terraform)"
 ]
 
 [[categories]]
@@ -262,11 +279,11 @@ skills = [
 [[categories.sections]]
 title = "Advanced Methodologies"
 skills = [
-    "Lean Six Sigma Black Belt",
-    "SCOR Model",
+    "Lean Six Sigma (Lean Advocate, Six Sigma Black Belt)",
+    "Supply Chain Operations Reference (SCOR Model)",
     "Simulation Modelling (FlexSim, AnyLogic)",
     "Agile Project Management",
-    "Multimodal Transportation",
+    "Multimodal Transportation & Network Optimization",
     "Mixed-Integer Programming"
 ]
 
@@ -278,27 +295,29 @@ skills = [
     "Prescriptive Analytics",
     "Blockchain for Supply Chain",
     "Robotic Process Automation (RPA)",
-    "IoT",
-    "MRP",
-    "ERP Systems (SAP, Oracle, Sage300)"
+    "Internet of Things (IoT)",
+    "Material Requirements Planning (MRP)",
+    "Enterprise Resource Planning (ERP) Systems (SAP, Oracle, Sage300)"
 ]
 
 [[categories.sections]]
 title = "Emerging Technologies"
 skills = [
-    "Edge Computing",
-    "Quantum Computing Basics",
-    "Low-Code/No-Code Platforms",
-    "Web3 & Decentralized Systems"
+    "Edge Computing (Manufacturing/Logistics IoT)",
+    "Quantum Computing Basics (Optimization Problems)",
+    "Low-Code/No-Code Platforms (Google AppSheet)",
+    "Web3 & Decentralized Systems",
+    "5G Applications in Supply Chain"
 ]
 
 [[categories.sections]]
 title = "Risk & Sustainability"
 skills = [
-    "Supply Chain Risk Management",
+    "Supply Chain Risk Management (SCRM)",
     "Trade Compliance & Customs",
-    "ISO 9001",
-    "ISO 14001",
+    "HS Codes & Free Trade Agreements (FTAs)",
+    "ISO 9001 (Quality Management Systems)",
+    "ISO 14001 (Environmental Management Systems)",
     "Sustainability & ESG Metrics",
     "Circular Economy"
 ]
@@ -310,20 +329,22 @@ color = "linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%))"
 [[categories.sections]]
 title = "Design Innovation"
 skills = [
-    "Design Thinking",
+    "Empathy Based Design Thinking",
     "Human-Centered Design",
     "User Personas",
     "Customer Journey Mapping",
-    "TRIZ",
+    "TRIZ (Theory of Inventive Problem Solving)",
     "Rapid Prototyping"
 ]
 
 [[categories.sections]]
 title = "Project Management"
 skills = [
-    "Agile & Scrum",
+    "Agile & Scrum Methodology",
     "Kanban",
+    "Software Development Lifecycle (Waterfall)",
     "Risk Management",
+    "Resource Planning",
     "Stakeholder Management",
     "Change Management",
     "Gantt Charts"
@@ -332,14 +353,21 @@ skills = [
 [[categories.sections]]
 title = "Lean Six Sigma"
 skills = [
+    "Lean Advocate",
     "Six Sigma Black Belt",
-    "DMAIC",
-    "Value Stream Mapping",
+    "DMAIC (Define, Measure, Analyze, Improve, Control)",
+    "Lean Manufacturing Principles (Value, Value stream, Flow, Pull, Perfection)",
+    "Value Stream Mapping (VSM)",
     "5S Methodology",
-    "Kaizen",
-    "Root Cause Analysis",
+    "Kaizen (Continuous Improvement)",
+    "Pareto Analysis (80/20)",
+    "Root Cause Analysis (RCA)",
     "5 Whys Analysis",
-    "Fishbone Diagram",
-    "Statistical Process Control",
+    "Fishbone/Ishikawa Diagram",
+    "Poka-Yoke (Error Proofing)",
+    "Statistical Process Control (SPC)",
+    "Control Charts",
+    "Process Capability Analysis (Cp, Cpk)",
+    "Hypothesis Testing",
     "Just-In-Time (JIT)"
 ]
