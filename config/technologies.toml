@@ -210,7 +210,6 @@ skills = [
 
 [[categories.sections]]
 title = "NoSQL Databases"
-columns = 3
 skills = [
     "MongoDB",
     "",
@@ -219,7 +218,6 @@ skills = [
 
 [[categories.sections]]
 title = "Data Warehouses & Analytics"
-columns = 3
 skills = [
     "Azure Synapse",
     "",
