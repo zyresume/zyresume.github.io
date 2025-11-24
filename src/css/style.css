@@ -514,21 +514,17 @@ main {
 /**
  * #service 
  */
-
 .service { 
   margin-bottom: 35px; 
 }
-
 .service-title { 
   margin-bottom: 20px; 
 }
-
 .service-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
-
 .service-item {
   position: relative;
   background: var(--border-gradient-onyx);
@@ -537,7 +533,6 @@ main {
   box-shadow: var(--shadow-2);
   z-index: 1;
 }
-
 .service-item::before {
   content: "";
   position: absolute;
@@ -546,26 +541,26 @@ main {
   border-radius: inherit;
   z-index: -1;
 }
-
 .service-icon-box { 
   display: flex;
   align-items: center; 
   justify-content: center; 
   margin-bottom: 10px; 
 }
-
 .service-icon-box img { 
-  margin-right: 10px; /* Space between the icon and the title */
+  margin-right: 10px;
 }
-
 .service-content-box { 
   text-align: absolute; 
 }
-
 .service-item-title { 
-  margin-top: 14px; 
-  font-size: 19px; /* Adjust this value to make the font bigger */
-  font-weight: bold; /* Optionally, make the font bold */
+  margin-top: 14px;
+  font-size: clamp(12px, 5vw, 19px); /* Dynamic font size */
+  font-weight: bold;
+  white-space: nowrap; /* Keeps text on one line */
+  overflow: hidden; /* Hides overflow */
+  text-overflow: ellipsis; /* Adds ... if text is too long */
+  width: 100%; /* Ensures it uses full width */
 }
 
 
