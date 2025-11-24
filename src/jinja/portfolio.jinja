@@ -32,7 +32,7 @@
     
     <ul class="project-list">
       {% for project in projects.project %}
-      <li class="project-item active" data-filter-item data-category="{{ project.category | lower }}">
+      <li class="project-item active" data-filter-item data-category="{{ project.category.lower().replace(' ', '-').replace('&', 'and') }}">
         <a href="{{ project.url }}" target="_blank">
           <figure class="project-img">
             <div class="project-item-icon-box">
