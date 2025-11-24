@@ -82,9 +82,13 @@ const filterFunc = function (selectedValue) {
   // Normalize the selected value to match data-category format
   // Convert to lowercase, replace spaces with hyphens, replace & with 'and'
   let normalizedValue = selectedValue.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+  
+  console.log('Selected Value:', selectedValue);
+  console.log('Normalized Value:', normalizedValue);
 
   for (let i = 0; i < filterItems.length; i++) {
-
+    console.log('Item category:', filterItems[i].dataset.category);
+    
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
     } else if (normalizedValue === filterItems[i].dataset.category) {
@@ -92,9 +96,7 @@ const filterFunc = function (selectedValue) {
     } else {
       filterItems[i].classList.remove("active");
     }
-
   }
-
 }
 
 // add event in all filter button items for large screen
@@ -181,4 +183,3 @@ function copyToClipboard(text) {
   // Optionally, you can display a message to indicate that the text has been copied
   alert(text + " has been copied to clipboard");
 }
-
