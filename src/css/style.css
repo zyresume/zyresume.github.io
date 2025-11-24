@@ -1630,7 +1630,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .article-title { padding-bottom: 20px; }
 
-  .filter-select-box { display: none; }
+  .filter-select-box {
+     display: block;
+     margin-bottom: 25px;
+   }
+	
+  .filter-list { display: none; }
 
   .filter-list {
     display: flex;
