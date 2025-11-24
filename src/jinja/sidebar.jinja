@@ -93,15 +93,18 @@
     <div class="separator"></div>
 
     <ul class="social-list">
-
+      {% set social_titles = {
+        "logo-linkedin": "LinkedIn",
+        "logo-github": "GitHub",
+        "logo-xing": "ExpertsExchange"
+      } %}
       {% for red, url in social.items() %}
       <li class="social-item">
-        <a href="{{url}}" class="social-link" , target="_blank">
+        <a href="{{url}}" class="social-link" target="_blank" title="{{ social_titles.get(red, red) }}">
           <ion-icon name="{{red}}"></ion-icon>
         </a>
       </li>
       {% endfor %}
-
     </ul>
 
   </div>
