@@ -13,12 +13,12 @@ text = "Analyzes the Why, How and What of user and business challenges to archit
 [[skills]]
 title = "Agile Project Execution"
 icon = "./config/assets/icons/bolt.svg"
-text = "Delivers consistent and timely results across Agile and SCRUM workflows through strategic task prioritization and efficient execution."
+text = "Delivers consistent and timely results across Agile sprints and SCRUM reviews through strategic task prioritization."
 
 [[skills]]
 title = "Continuous Learner"
 icon = "./config/assets/icons/comment.svg"
-text = "Embraces challenges beyond comfort zones and rapidly master new technologies and methodologies to stay ahead of evolving project requirements."
+text = "Embraces challenges beyond comfort zones and can rapidly master new technologies and methodologies to stay ahead of evolving project requirements."
 
 [[skills]]
 title = "Collaborative Team Player"
