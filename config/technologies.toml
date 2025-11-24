@@ -104,20 +104,10 @@ skills = [
     "T-SQL",
     "PL/SQL",
     "PL/pgSQL",
-    "MySQL",
-    "PostgreSQL",
-    "SQLite",
-    "Microsoft SQL Server",
-    "Oracle Database",
-    "MariaDB",
-    "MongoDB Query Language (MQL)",
+    "MQL",
     "LINQ",
-    "Redis",
-    "Azure Synapse",
-    "Q (kdb+)",
-    "Elasticsearch Query DSL",
-    "GraphQL",
-    "MDX"
+    "MDX",
+    "Q"
 ]
 
 [[categories]]
