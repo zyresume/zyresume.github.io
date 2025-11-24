@@ -11,19 +11,6 @@
       {% endif %}
     {% endfor %}
     
-    {# Filter buttons for desktop #}
-    <ul class="filter-list">
-      <li class="filter-item">
-        <button class="active" data-filter-btn>All</button>
-      </li>
-      {% for category in categories %}
-      <li class="filter-item">
-        <button data-filter-btn>{{ category }}</button>
-      </li>
-      {% endfor %}
-    </ul>
-    
-    {# Filter dropdown for mobile #}
     <div class="filter-select-box">
       <button class="filter-select" data-select>
         <div class="select-value" data-select-value>All</div>
