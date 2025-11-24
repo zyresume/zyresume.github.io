@@ -74,7 +74,8 @@ skills = [
     "Erlang",
     "R",
     "Julia",
-    "Fortran"
+    "Fortran",
+    "MATLAB"
 ]
 
 [[categories.sections]]
@@ -88,6 +89,9 @@ skills = [
     "Assembly",
     "ActionScript",
     "Pascal",
+    "Ada",
+    "PowerShell",
+    "UnrealScript",
     "GDScript",
     "Scratch"
 ]
