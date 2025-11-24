@@ -1,9 +1,6 @@
 name = "Ong Zhen Yang"
 rol = [
-    "Digital Supply Chain Specialist",
-    "Software Developer",
-    "Fullstack Developer",
-    "AI Engineer"
+    "Digital Supply Chain Specialist"
 ]
 email = "zyresume@outlook.com"
 phone = "(+65) 8013 7483"
