@@ -81,6 +81,16 @@ for (let i = 0; i < selectItems.length; i++) {
   });
 }
 
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+  if (select && select.classList.contains('active')) {
+    // Check if click is outside the select element
+    if (!select.contains(event.target) && !event.target.closest('[data-select]')) {
+      elementToggleFunc(select);
+    }
+  }
+});
+
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
