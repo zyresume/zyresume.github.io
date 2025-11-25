@@ -11,7 +11,7 @@
         <input id="name" name="name" class="form-input" type="text" placeholder="Your Name" required data-form-input style="width: 100%; margin-bottom: 20px;">
         
         <div style="position: relative; margin-bottom: 20px;">
-          <input id="email" name="email" class="form-input" type="email" placeholder="Your Email" required data-form-input style="width: 100%;">
+          <input id="email" name="email" class="form-input" type="text" placeholder="Your Email" required data-form-input style="width: 100%;">
           <div id="email-error" style="color: #f44336; font-size: 12px; margin-top: 5px; display: none;">Please enter a valid email address (must contain @)</div>
         </div>
         
@@ -61,7 +61,11 @@
 
     // Email validation on input
     emailInput.addEventListener('input', function() {
-      if (this.value && !this.value.includes('@')) {
+      const value = this.value.trim();
+      const hasAt = value.includes('@');
+      const hasTextAfterAt = hasAt && value.split('@')[1].length > 0;
+      
+      if (value && (!hasAt || !hasTextAfterAt)) {
         emailError.style.display = 'block';
         this.style.borderColor = 'var(--bittersweet-shimmer)';
       } else {
@@ -72,7 +76,11 @@
 
     // Email validation on blur
     emailInput.addEventListener('blur', function() {
-      if (this.value && !this.value.includes('@')) {
+      const value = this.value.trim();
+      const hasAt = value.includes('@');
+      const hasTextAfterAt = hasAt && value.split('@')[1].length > 0;
+      
+      if (value && (!hasAt || !hasTextAfterAt)) {
         emailError.style.display = 'block';
         this.style.borderColor = 'var(--bittersweet-shimmer)';
       }
@@ -83,8 +91,12 @@
       e.preventDefault();
       e.stopPropagation();
       
-      // Validate email contains @
-      if (!emailInput.value.includes('@')) {
+      // Validate email contains @ and text after @
+      const emailValue = emailInput.value.trim();
+      const hasAt = emailValue.includes('@');
+      const hasTextAfterAt = hasAt && emailValue.split('@')[1].length > 0;
+      
+      if (!hasAt || !hasTextAfterAt) {
         emailError.style.display = 'block';
         emailInput.style.borderColor = 'var(--bittersweet-shimmer)';
         emailInput.focus();
