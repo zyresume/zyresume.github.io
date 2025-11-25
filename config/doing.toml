@@ -1,26 +1,26 @@
 [[doing]]
 title = "Supply Chain Digitalization"
-icon = "./config/assets/icons/DataAnalysis.png"
+icon = "./config/assets/icons/SupplyChainDigitalization.png"
 
 [[doing]]
 title = "Lean Six Sigma"
-icon = "./config/assets/icons/SoftwareAPI.png"
+icon = "./config/assets/icons/LeanSixSigma.png"
 
 [[doing]]
 title = "Fullstack Development"
-icon = "./config/assets/icons/AutomationScripting.png"
+icon = "./config/assets/icons/FullstackDevelopment.png"
 
 [[doing]]
 title = "Software Development"
-icon = "./config/assets/icons/AIEngineering.png"
+icon = "./config/assets/icons/SoftwareDevelopment.png"
 
 [[doing]]
 title = "AI & ML Engineering"
-icon = "./config/assets/icons/WebDevelopment.png"
+icon = "./config/assets/icons/AIEngineering.png"
 
 [[doing]]
 title = "Quantum Computing"
-icon = "./config/assets/icons/ProcessOptimization.png"
+icon = "./config/assets/icons/QuantumComputing.png"
 
 
 
