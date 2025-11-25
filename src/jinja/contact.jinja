@@ -10,7 +10,10 @@
       <div class="input-wrapper" style="display: block;">
         <input id="name" name="name" class="form-input" type="text" placeholder="Your Name" required data-form-input style="width: 100%; margin-bottom: 20px;">
         
-        <input id="email" name="email" class="form-input" type="email" placeholder="Your Email" required data-form-input style="width: 100%; margin-bottom: 20px;">
+        <div style="position: relative; margin-bottom: 20px;">
+          <input id="email" name="email" class="form-input" type="email" placeholder="Your Email" required data-form-input style="width: 100%;">
+          <div id="email-error" style="color: #f44336; font-size: 12px; margin-top: 5px; display: none;">Please enter a valid email address (must contain @)</div>
+        </div>
         
         <input id="subject-visible" name="subject-visible" class="form-input" type="text" placeholder="Subject" required data-form-input style="width: 100%; margin-bottom: 20px;">
         
@@ -22,11 +25,20 @@
         <span>Send Message</span>
       </button>
     </form>
-    <div id="form-status" style="text-align: center; margin-top: 15px; display: none;">
-      <p id="status-message" style="font-size: 14px;"></p>
-    </div>
   </section>
 </article>
+
+<!-- Confirmation Modal -->
+<div id="confirmation-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 1000; justify-content: center; align-items: center;">
+  <div style="background: var(--eerie-black-2); border: 1px solid var(--jet); border-radius: 20px; padding: 30px; max-width: 400px; width: 90%; text-align: center;">
+    <h3 id="modal-title" style="color: var(--white-2); margin-bottom: 20px; font-size: 20px;">Confirm Submission</h3>
+    <p id="modal-message" style="color: var(--light-gray); margin-bottom: 30px; font-size: 16px;">Are you sure you want to send this message?</p>
+    <div style="display: flex; gap: 15px; justify-content: center;">
+      <button id="modal-yes" style="background: var(--border-gradient-onyx); color: var(--orange-yellow-crayola); padding: 12px 30px; border: none; border-radius: 12px; cursor: pointer; font-size: 16px; font-weight: 500;">Yes, Send</button>
+      <button id="modal-no" style="background: var(--border-gradient-onyx); color: var(--light-gray); padding: 12px 30px; border: none; border-radius: 12px; cursor: pointer; font-size: 16px; font-weight: 500;">No, Cancel</button>
+    </div>
+  </div>
+</div>
 
 <script>
   (function() {
@@ -35,60 +47,144 @@
     const form = document.getElementById('contactForm');
     if (!form) return;
     
-    const statusDiv = document.getElementById('form-status');
-    const statusMessage = document.getElementById('status-message');
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('email-error');
     const subjectVisible = document.getElementById('subject-visible');
     const hiddenSubject = document.getElementById('hidden-subject');
+    const modal = document.getElementById('confirmation-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalMessage = document.getElementById('modal-message');
+    const modalYes = document.getElementById('modal-yes');
+    const modalNo = document.getElementById('modal-no');
+    
+    let formDataToSubmit = null;
 
+    // Email validation on input
+    emailInput.addEventListener('input', function() {
+      if (this.value && !this.value.includes('@')) {
+        emailError.style.display = 'block';
+        this.style.borderColor = 'var(--bittersweet-shimmer)';
+      } else {
+        emailError.style.display = 'none';
+        this.style.borderColor = '';
+      }
+    });
+
+    // Email validation on blur
+    emailInput.addEventListener('blur', function() {
+      if (this.value && !this.value.includes('@')) {
+        emailError.style.display = 'block';
+        this.style.borderColor = 'var(--bittersweet-shimmer)';
+      }
+    });
+
+    // Show confirmation modal
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       e.stopPropagation();
       
-      // Copy subject to hidden field for Web3Forms
+      // Validate email contains @
+      if (!emailInput.value.includes('@')) {
+        emailError.style.display = 'block';
+        emailInput.style.borderColor = 'var(--bittersweet-shimmer)';
+        emailInput.focus();
+        return;
+      }
+      
+      // Copy subject to hidden field
       if (subjectVisible && hiddenSubject) {
         hiddenSubject.value = subjectVisible.value;
       }
       
-      const formData = new FormData(form);
-      const button = form.querySelector('.form-btn');
-      const originalButtonText = button.innerHTML;
+      // Store form data
+      formDataToSubmit = new FormData(form);
       
-      // Show loading state
-      button.disabled = true;
-      button.innerHTML = '<span>Sending...</span>';
+      // Show confirmation modal
+      modalTitle.textContent = 'Confirm Submission';
+      modalMessage.textContent = 'Are you sure you want to send this message?';
+      modalYes.style.display = 'inline-block';
+      modalNo.style.display = 'inline-block';
+      modal.style.display = 'flex';
+    });
+
+    // Handle No button
+    modalNo.addEventListener('click', function() {
+      modal.style.display = 'none';
+      formDataToSubmit = null;
+    });
+
+    // Handle Yes button - Submit form
+    modalYes.addEventListener('click', function() {
+      // Change modal to loading state
+      modalTitle.textContent = 'Sending...';
+      modalMessage.textContent = 'Please wait while we send your message.';
+      modalYes.style.display = 'none';
+      modalNo.style.display = 'none';
       
+      // Submit the form
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: formData
+        body: formDataToSubmit
       })
       .then(function(response) {
         return response.json();
       })
       .then(function(data) {
         if (data.success) {
-          statusDiv.style.display = 'block';
-          statusMessage.style.color = '#4CAF50';
-          statusMessage.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+          // Show success message in modal
+          modalTitle.textContent = 'Message Sent!';
+          modalMessage.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+          modalMessage.style.color = '#4CAF50';
+          
+          // Reset form
           form.reset();
+          emailError.style.display = 'none';
+          emailInput.style.borderColor = '';
+          
+          // Add close button
+          setTimeout(function() {
+            const closeBtn = document.createElement('button');
+            closeBtn.textContent = 'Close';
+            closeBtn.style.cssText = 'background: var(--border-gradient-onyx); color: var(--orange-yellow-crayola); padding: 12px 30px; border: none; border-radius: 12px; cursor: pointer; font-size: 16px; font-weight: 500; margin-top: 20px;';
+            closeBtn.addEventListener('click', function() {
+              modal.style.display = 'none';
+              modalMessage.style.color = '';
+              this.remove();
+            });
+            document.querySelector('#confirmation-modal > div').appendChild(closeBtn);
+          }, 100);
         } else {
           throw new Error(data.message || 'Form submission failed');
         }
       })
       .catch(function(error) {
-        statusDiv.style.display = 'block';
-        statusMessage.style.color = '#f44336';
-        statusMessage.textContent = '✗ Oops! Something went wrong. Please try again.';
+        // Show error message in modal
+        modalTitle.textContent = 'Error';
+        modalMessage.textContent = '✗ Oops! Something went wrong. Please try again.';
+        modalMessage.style.color = '#f44336';
         console.error('Error:', error);
-      })
-      .finally(function() {
-        button.disabled = false;
-        button.innerHTML = originalButtonText;
         
-        // Hide status message after 5 seconds
+        // Add close button
         setTimeout(function() {
-          statusDiv.style.display = 'none';
-        }, 5000);
+          const closeBtn = document.createElement('button');
+          closeBtn.textContent = 'Close';
+          closeBtn.style.cssText = 'background: var(--border-gradient-onyx); color: var(--orange-yellow-crayola); padding: 12px 30px; border: none; border-radius: 12px; cursor: pointer; font-size: 16px; font-weight: 500; margin-top: 20px;';
+          closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            modalMessage.style.color = '';
+            this.remove();
+          });
+          document.querySelector('#confirmation-modal > div').appendChild(closeBtn);
+        }, 100);
       });
+    });
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        formDataToSubmit = null;
+      }
     });
   })();
 </script>
