@@ -1,9 +1,7 @@
 <article class="contact" data-page="contact">
-
   <header>
     <h2 class="h2 article-title">Contact</h2>
   </header>
-
   <section class="mapbox" data-mapbox>
     <figure>
       <iframe
@@ -11,51 +9,81 @@
         width="400" height="300" loading="lazy"></iframe>
     </figure>
   </section>
-
   <section class="contact-form">
-
-    <h3 class="h3 form-title">WhatsApp Direct Contact Form</h3>
-
-    <form class="form" data-form>
-
+    <h3 class="h3 form-title">Contact Form</h3>
+    <form class="form" data-form id="contactForm">
+      <input type="hidden" name="access_key" value="71f4cba7-14dd-4ad9-ad89-c87e14b3cdd9">
+      <input type="hidden" name="subject" id="hidden-subject">
+      <input type="hidden" name="redirect" value="https://web3forms.com/success">
       <div class="input-wrapper">
-        <!-- Enlarged the message box and centered the button -->
+        <input id="name" name="name" class="form-input" type="text" placeholder="Your Name" required data-form-input style="width: 208%; margin-bottom: 15px; font-size: 16px;">
+        <input id="email" name="email" class="form-input" type="email" placeholder="Your Email" required data-form-input style="width: 208%; margin-bottom: 15px; font-size: 16px;">
+        <input id="subject" name="subject-visible" class="form-input" type="text" placeholder="Subject" required data-form-input style="width: 208%; margin-bottom: 15px; font-size: 16px;">
         <textarea id="message" name="message" class="form-input" placeholder="Your Message" required data-form-input style="width: 208%; height: 200px; margin-bottom: 20px; font-size: 16px;"></textarea>
-
-        <div style="text-align: center; margin-top: 220px;">
-          <button class="form-btn" type="button" onclick="validateAndSend()" style="font-size: 16px; padding: 12px 20px;">
+        <div style="text-align: center; margin-top: 20px;">
+          <button class="form-btn" type="submit" style="font-size: 16px; padding: 12px 20px;">
             <ion-icon name="paper-plane" style="font-size: 18px; vertical-align: middle;"></ion-icon>
             <span>Send Message</span>
-        </button>
+          </button>
+        </div>
       </div>
-
     </form>
-
+    <div id="form-status" style="text-align: center; margin-top: 15px; display: none;">
+      <p id="status-message" style="font-size: 14px;"></p>
+    </div>
   </section>
+</article>
 
- <script>
-  function validateAndSend() {
-    // Retrieve user input values
-    var message = document.getElementById('message').value;
+<script>
+  const form = document.getElementById('contactForm');
+  const statusDiv = document.getElementById('form-status');
+  const statusMessage = document.getElementById('status-message');
+  const subjectVisible = document.getElementById('subject');
+  const hiddenSubject = document.getElementById('hidden-subject');
 
-    // Variable to store error messages
-    var errors = '';
-
-    // Validate message input
-    if (message.length < 10) {
-      errors += 'Please enter a message with at least 10 characters.\n';
-    }
-
-    // If there are errors, display them in a single alert
-    if (errors) {
-      alert(errors);
-      return;
-    }
-
-    // Construct WhatsApp message URL with the message only
-    var whatsappURL = 'https://api.whatsapp.com/send?phone=+6580137483&text=' + encodeURIComponent('Message: ' + message);
-
-    // Open WhatsApp URL in a new window
-    window.open(whatsappURL, '_blank');
-  }
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Copy subject to hidden field for Web3Forms
+    hiddenSubject.value = subjectVisible.value;
+    
+    const formData = new FormData(form);
+    const button = form.querySelector('.form-btn');
+    const originalButtonText = button.innerHTML;
+    
+    // Show loading state
+    button.disabled = true;
+    button.innerHTML = '<span>Sending...</span>';
+    
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        statusDiv.style.display = 'block';
+        statusMessage.style.color = '#4CAF50';
+        statusMessage.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+        form.reset();
+      } else {
+        throw new Error(data.message || 'Form submission failed');
+      }
+    })
+    .catch(error => {
+      statusDiv.style.display = 'block';
+      statusMessage.style.color = '#f44336';
+      statusMessage.textContent = '✗ Oops! Something went wrong. Please try again.';
+      console.error('Error:', error);
+    })
+    .finally(() => {
+      button.disabled = false;
+      button.innerHTML = originalButtonText;
+      
+      // Hide status message after 5 seconds
+      setTimeout(() => {
+        statusDiv.style.display = 'none';
+      }, 5000);
+    });
+  });
 </script>
