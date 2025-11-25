@@ -14,18 +14,21 @@
     <form class="form" data-form id="contactForm">
       <input type="hidden" name="access_key" value="71f4cba7-14dd-4ad9-ad89-c87e14b3cdd9">
       <input type="hidden" name="subject" id="hidden-subject">
-      <div class="input-wrapper">
-        <input id="name" name="name" class="form-input" type="text" placeholder="Your Name" required data-form-input style="width: 208%; margin-bottom: 15px; font-size: 16px;">
-        <input id="email" name="email" class="form-input" type="email" placeholder="Your Email" required data-form-input style="width: 208%; margin-bottom: 15px; font-size: 16px;">
-        <input id="subject-visible" name="subject-visible" class="form-input" type="text" placeholder="Subject" required data-form-input style="width: 208%; margin-bottom: 15px; font-size: 16px;">
-        <textarea id="message" name="message" class="form-input" placeholder="Your Message" required data-form-input style="width: 208%; height: 200px; margin-bottom: 20px; font-size: 16px;"></textarea>
-        <div style="text-align: center; margin-top: 20px;">
-          <button class="form-btn" type="submit" style="font-size: 16px; padding: 12px 20px;">
-            <ion-icon name="paper-plane" style="font-size: 18px; vertical-align: middle;"></ion-icon>
-            <span>Send Message</span>
-          </button>
-        </div>
+      
+      <div class="input-wrapper" style="display: block;">
+        <input id="name" name="name" class="form-input" type="text" placeholder="Your Name" required data-form-input style="width: 100%; margin-bottom: 20px;">
+        
+        <input id="email" name="email" class="form-input" type="email" placeholder="Your Email" required data-form-input style="width: 100%; margin-bottom: 20px;">
+        
+        <input id="subject-visible" name="subject-visible" class="form-input" type="text" placeholder="Subject" required data-form-input style="width: 100%; margin-bottom: 20px;">
+        
+        <textarea id="message" name="message" class="form-input" placeholder="Your Message" required data-form-input style="width: 100%; height: 400px; min-height: 400px; max-height: 600px; resize: vertical; margin-bottom: 20px;"></textarea>
       </div>
+      
+      <button class="form-btn" type="submit" data-form-btn>
+        <ion-icon name="paper-plane"></ion-icon>
+        <span>Send Message</span>
+      </button>
     </form>
     <div id="form-status" style="text-align: center; margin-top: 15px; display: none;">
       <p id="status-message" style="font-size: 14px;"></p>
