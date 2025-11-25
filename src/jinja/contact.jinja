@@ -14,11 +14,10 @@
     <form class="form" data-form id="contactForm">
       <input type="hidden" name="access_key" value="71f4cba7-14dd-4ad9-ad89-c87e14b3cdd9">
       <input type="hidden" name="subject" id="hidden-subject">
-      <input type="hidden" name="redirect" value="https://web3forms.com/success">
       <div class="input-wrapper">
         <input id="name" name="name" class="form-input" type="text" placeholder="Your Name" required data-form-input style="width: 208%; margin-bottom: 15px; font-size: 16px;">
         <input id="email" name="email" class="form-input" type="email" placeholder="Your Email" required data-form-input style="width: 208%; margin-bottom: 15px; font-size: 16px;">
-        <input id="subject" name="subject-visible" class="form-input" type="text" placeholder="Subject" required data-form-input style="width: 208%; margin-bottom: 15px; font-size: 16px;">
+        <input id="subject-visible" name="subject-visible" class="form-input" type="text" placeholder="Subject" required data-form-input style="width: 208%; margin-bottom: 15px; font-size: 16px;">
         <textarea id="message" name="message" class="form-input" placeholder="Your Message" required data-form-input style="width: 208%; height: 200px; margin-bottom: 20px; font-size: 16px;"></textarea>
         <div style="text-align: center; margin-top: 20px;">
           <button class="form-btn" type="submit" style="font-size: 16px; padding: 12px 20px;">
@@ -35,55 +34,66 @@
 </article>
 
 <script>
-  const form = document.getElementById('contactForm');
-  const statusDiv = document.getElementById('form-status');
-  const statusMessage = document.getElementById('status-message');
-  const subjectVisible = document.getElementById('subject');
-  const hiddenSubject = document.getElementById('hidden-subject');
+  (function() {
+    'use strict';
+    
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+    
+    const statusDiv = document.getElementById('form-status');
+    const statusMessage = document.getElementById('status-message');
+    const subjectVisible = document.getElementById('subject-visible');
+    const hiddenSubject = document.getElementById('hidden-subject');
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Copy subject to hidden field for Web3Forms
-    hiddenSubject.value = subjectVisible.value;
-    
-    const formData = new FormData(form);
-    const button = form.querySelector('.form-btn');
-    const originalButtonText = button.innerHTML;
-    
-    // Show loading state
-    button.disabled = true;
-    button.innerHTML = '<span>Sending...</span>';
-    
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        statusDiv.style.display = 'block';
-        statusMessage.style.color = '#4CAF50';
-        statusMessage.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
-        form.reset();
-      } else {
-        throw new Error(data.message || 'Form submission failed');
-      }
-    })
-    .catch(error => {
-      statusDiv.style.display = 'block';
-      statusMessage.style.color = '#f44336';
-      statusMessage.textContent = '✗ Oops! Something went wrong. Please try again.';
-      console.error('Error:', error);
-    })
-    .finally(() => {
-      button.disabled = false;
-      button.innerHTML = originalButtonText;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
       
-      // Hide status message after 5 seconds
-      setTimeout(() => {
-        statusDiv.style.display = 'none';
-      }, 5000);
+      // Copy subject to hidden field for Web3Forms
+      if (subjectVisible && hiddenSubject) {
+        hiddenSubject.value = subjectVisible.value;
+      }
+      
+      const formData = new FormData(form);
+      const button = form.querySelector('.form-btn');
+      const originalButtonText = button.innerHTML;
+      
+      // Show loading state
+      button.disabled = true;
+      button.innerHTML = '<span>Sending...</span>';
+      
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        if (data.success) {
+          statusDiv.style.display = 'block';
+          statusMessage.style.color = '#4CAF50';
+          statusMessage.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+          form.reset();
+        } else {
+          throw new Error(data.message || 'Form submission failed');
+        }
+      })
+      .catch(function(error) {
+        statusDiv.style.display = 'block';
+        statusMessage.style.color = '#f44336';
+        statusMessage.textContent = '✗ Oops! Something went wrong. Please try again.';
+        console.error('Error:', error);
+      })
+      .finally(function() {
+        button.disabled = false;
+        button.innerHTML = originalButtonText;
+        
+        // Hide status message after 5 seconds
+        setTimeout(function() {
+          statusDiv.style.display = 'none';
+        }, 5000);
+      });
     });
-  });
+  })();
 </script>
