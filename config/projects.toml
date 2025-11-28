@@ -90,7 +90,7 @@ url = "https://github.com/GoodbyeKittyy/3D-Clinic-Design"
 
 [[project]]
 title = "Business Intelligence (Finance, Sales, Marketing, Supply Chain & Executive)"
-category = "Dashboards"
+category = "Dashboarding"
 image = "./config/assets/projects/intelligence.png"
 url = "https://github.com/GoodbyeKittyy/Business-Intelligence-Dashboard"
 
