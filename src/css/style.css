@@ -1049,7 +1049,49 @@ main {
   font-weight: var(--fw-300);
 }
 
+/* Subcategory dropdown styles */
+.select-item.has-subcategory {
+  position: relative;
+}
 
+.select-item.has-subcategory > button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-item.has-subcategory > button .arrow {
+  margin-left: 8px;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.subcategory-list {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  padding: 6px;
+  min-width: 200px;
+  margin-left: 8px;
+  z-index: 10;
+}
+
+.select-item.has-subcategory:hover .subcategory-list {
+  display: block;
+}
+
+.subcategory-list .select-item button {
+  padding: 8px 12px;
+  font-size: var(--fs-6);
+}
+
+.subcategory-list .select-item button:hover {
+  background: hsl(240, 2%, 20%);
+}
 
 
 
