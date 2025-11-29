@@ -65,20 +65,79 @@ if (select) {
   select.addEventListener("click", function () { elementToggleFunc(this); });
 }
 
+// Enhanced filter functionality for subcategories
+let selectedCategory = "all";
+let selectedSubcategory = "all";
+
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    if (selectValue) {
-      selectValue.innerText = this.innerText;
+    const category = this.closest('[data-category]')?.getAttribute('data-category') || 'all';
+    const subcategory = this.getAttribute('data-subcategory');
+    
+    if (subcategory) {
+      // Subcategory clicked
+      selectedSubcategory = subcategory;
+      selectedCategory = category;
+    } else if (category === 'all') {
+      // "All" clicked
+      selectedCategory = "all";
+      selectedSubcategory = "all";
+    } else {
+      // Main category clicked (without subcategories)
+      selectedCategory = category;
+      selectedSubcategory = "all";
     }
+    
+    // Update button text
+    if (selectValue) {
+      selectValue.textContent = this.textContent.replace('▶', '').trim();
+    }
+    
+    // Filter projects
+    filterFunc();
+    
+    // Close dropdown
     if (select) {
       elementToggleFunc(select);
     }
-    filterFunc(selectedValue);
-
   });
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+  if (select && select.classList.contains('active')) {
+    // Check if click is outside the select element
+    if (!select.contains(event.target) && !event.target.closest('[data-select]')) {
+      elementToggleFunc(select);
+    }
+  }
+});
+
+// Updated filter function
+const filterFunc = function () {
+  for (let i = 0; i < filterItems.length; i++) {
+    const itemCategory = filterItems[i].getAttribute("data-category");
+    const itemSubcategory = filterItems[i].getAttribute("data-subcategory");
+    
+    if (selectedCategory === "all") {
+      filterItems[i].classList.add("active");
+    } else if (selectedSubcategory === "all") {
+      // Show all items in this category
+      if (itemCategory === selectedCategory) {
+        filterItems[i].classList.add("active");
+      } else {
+        filterItems[i].classList.remove("active");
+      }
+    } else {
+      // Show only items matching both category and subcategory
+      if (itemCategory === selectedCategory && itemSubcategory === selectedSubcategory) {
+        filterItems[i].classList.add("active");
+      } else {
+        filterItems[i].classList.remove("active");
+      }
+    }
+  }
 }
 
 // Close dropdown when clicking outside
@@ -124,8 +183,13 @@ for (let i = 0; i < filterBtn.length; i++) {
   filterBtn[i].addEventListener("click", function () {
 
     let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
+    selectedCategory = selectedValue.replace(/\s+/g, '-').replace(/&/g, 'and');
+    selectedSubcategory = "all";
+    
+    if (selectValue) {
+      selectValue.innerText = this.innerText;
+    }
+    filterFunc();
 
     lastClickedBtn.classList.remove("active");
     this.classList.add("active");
@@ -134,7 +198,6 @@ for (let i = 0; i < filterBtn.length; i++) {
   });
 
 }
-
 
 
 // contact form variables
