@@ -555,7 +555,6 @@ main {
 .service-icon-box { 
   display: flex;
   justify-content: center; 
-  margin-bottom: 15px; 
 }
 
 .service-icon-box img { 
