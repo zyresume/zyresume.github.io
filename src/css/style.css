@@ -1417,7 +1417,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     justify-content: flex-start;
     align-items: center;
     gap: 5px;
-    padding: 20px 15px;
   }
 
   .service-icon-box {
