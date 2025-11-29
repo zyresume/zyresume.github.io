@@ -553,9 +553,8 @@ main {
 }
 .service-icon-box { 
   display: flex;
-  align-items: center; 
   justify-content: center; 
-  margin-bottom: 15px; 
+  margin-bottom: 20px; 
 }
 .service-icon-box img { 
   margin-right: 10px;
@@ -1419,10 +1418,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 8px;
   }
 
-  .service-icon-box {
-    margin-bottom: 0;
-    margin-top: 0px;
-  }
 
   .service-content-box { text-align: left; }
 
