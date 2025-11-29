@@ -1416,8 +1416,8 @@ textarea.form-input::-webkit-resizer { display: none; }
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 18px;
-    padding: 30px;
+    gap: 12px;
+    padding: 20px 15px;
   }
 
   .service-icon-box {
