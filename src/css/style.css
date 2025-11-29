@@ -539,10 +539,10 @@ main {
   position: relative;
   background: var(--border-gradient-onyx);
   padding: 10px;
-  border-radius: 14px;
+  border-radius: 10px;
   box-shadow: var(--shadow-2);
   z-index: 1;
-  height: 120px;
+
 }
 .service-item::before {
   content: "";
