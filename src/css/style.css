@@ -563,6 +563,7 @@ main {
 }
 .service-content-box { 
   text-align: absolute;
+  margin-bottom: 20px;
 }
 
 .service-item-title { 
