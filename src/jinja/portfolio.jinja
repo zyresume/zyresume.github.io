@@ -3,11 +3,16 @@
     <h2 class="h2 article-title">Portfolio</h2>
   </header>
   <section class="projects">
-    {# Extract unique categories from projects #}
-    {% set categories = [] %}
+    {# Build category structure with subcategories #}
+    {% set category_structure = {} %}
     {% for project in projects.project %}
-      {% if project.category not in categories %}
-        {% set _ = categories.append(project.category) %}
+      {% if project.category not in category_structure %}
+        {% set _ = category_structure.update({project.category: {}}) %}
+      {% endif %}
+      {% if project.subcategory %}
+        {% if project.subcategory not in category_structure[project.category] %}
+          {% set _ = category_structure[project.category].update({project.subcategory: true}) %}
+        {% endif %}
       {% endif %}
     {% endfor %}
     
@@ -20,11 +25,26 @@
       </button>
       <ul class="select-list">
         <li class="select-item">
-          <button data-select-item>All</button>
+          <button data-select-item data-category="all">All</button>
         </li>
-        {% for category in categories %}
-        <li class="select-item">
-          <button data-select-item>{{ category }}</button>
+        {% for category, subcategories in category_structure.items() %}
+        <li class="select-item {% if subcategories %}has-subcategory{% endif %}" data-category="{{ category | lower | replace(' ', '-') | replace('&', 'and') }}">
+          <button data-select-item>
+            {{ category }}
+            {% if subcategories %}<span class="arrow">▶</span>{% endif %}
+          </button>
+          {% if subcategories %}
+          <ul class="subcategory-list">
+            <li class="select-item">
+              <button data-select-item data-subcategory="all">All {{ category }}</button>
+            </li>
+            {% for subcategory in subcategories.keys() %}
+            <li class="select-item">
+              <button data-select-item data-subcategory="{{ subcategory | lower | replace(' ', '-') }}">{{ subcategory }}</button>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>
@@ -32,7 +52,10 @@
     
     <ul class="project-list">
       {% for project in projects.project %}
-      <li class="project-item active" data-filter-item data-category="{{ project.category | lower | replace(' ', '-') | replace('&', 'and') }}">
+      <li class="project-item active" 
+          data-filter-item 
+          data-category="{{ project.category | lower | replace(' ', '-') | replace('&', 'and') }}"
+          {% if project.subcategory %}data-subcategory="{{ project.subcategory | lower | replace(' ', '-') }}"{% endif %}>
         <a href="{{ project.url }}" target="_blank">
           <figure class="project-img">
             <div class="project-item-icon-box">
@@ -41,7 +64,7 @@
             <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
           </figure>
           <h3 class="project-title">{{ project.title }}</h3>
-          <p class="project-category">{{ project.category }}</p>
+          <p class="project-category">{{ project.category }}{% if project.subcategory %} - {{ project.subcategory }}{% endif %}</p>
         </a>
       </li>
       {% endfor %}
