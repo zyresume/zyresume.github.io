@@ -59,6 +59,7 @@ const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
+const filterItems = document.querySelectorAll("[data-filter-item]");
 
 // Only add event listener if select exists
 if (select) {
@@ -68,6 +69,32 @@ if (select) {
 // Enhanced filter functionality for subcategories
 let selectedCategory = "all";
 let selectedSubcategory = "all";
+
+// Updated filter function (ONLY ONE DEFINITION)
+const filterFunc = function () {
+  for (let i = 0; i < filterItems.length; i++) {
+    const itemCategory = filterItems[i].getAttribute("data-category");
+    const itemSubcategory = filterItems[i].getAttribute("data-subcategory");
+    
+    if (selectedCategory === "all") {
+      filterItems[i].classList.add("active");
+    } else if (selectedSubcategory === "all") {
+      // Show all items in this category
+      if (itemCategory === selectedCategory) {
+        filterItems[i].classList.add("active");
+      } else {
+        filterItems[i].classList.remove("active");
+      }
+    } else {
+      // Show only items matching both category and subcategory
+      if (itemCategory === selectedCategory && itemSubcategory === selectedSubcategory) {
+        filterItems[i].classList.add("active");
+      } else {
+        filterItems[i].classList.remove("active");
+      }
+    }
+  }
+}
 
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
@@ -104,7 +131,7 @@ for (let i = 0; i < selectItems.length; i++) {
   });
 }
 
-// Close dropdown when clicking outside
+// Close dropdown when clicking outside (ONLY ONE DEFINITION)
 document.addEventListener('click', function(event) {
   if (select && select.classList.contains('active')) {
     // Check if click is outside the select element
@@ -113,67 +140,6 @@ document.addEventListener('click', function(event) {
     }
   }
 });
-
-// Updated filter function
-const filterFunc = function () {
-  for (let i = 0; i < filterItems.length; i++) {
-    const itemCategory = filterItems[i].getAttribute("data-category");
-    const itemSubcategory = filterItems[i].getAttribute("data-subcategory");
-    
-    if (selectedCategory === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedSubcategory === "all") {
-      // Show all items in this category
-      if (itemCategory === selectedCategory) {
-        filterItems[i].classList.add("active");
-      } else {
-        filterItems[i].classList.remove("active");
-      }
-    } else {
-      // Show only items matching both category and subcategory
-      if (itemCategory === selectedCategory && itemSubcategory === selectedSubcategory) {
-        filterItems[i].classList.add("active");
-      } else {
-        filterItems[i].classList.remove("active");
-      }
-    }
-  }
-}
-
-// Close dropdown when clicking outside
-document.addEventListener('click', function(event) {
-  if (select && select.classList.contains('active')) {
-    // Check if click is outside the select element
-    if (!select.contains(event.target) && !event.target.closest('[data-select]')) {
-      elementToggleFunc(select);
-    }
-  }
-});
-
-
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-const filterFunc = function (selectedValue) {
-  // Normalize the selected value to match data-category format
-  // Convert to lowercase, replace spaces with hyphens, replace & with 'and'
-  let normalizedValue = selectedValue.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
-  
-  console.log('Selected Value:', selectedValue);
-  console.log('Normalized Value:', normalizedValue);
-
-  for (let i = 0; i < filterItems.length; i++) {
-    console.log('Item category:', filterItems[i].dataset.category);
-    
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (normalizedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-  }
-}
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
