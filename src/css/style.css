@@ -554,14 +554,17 @@ main {
 .service-icon-box { 
   display: flex;
   justify-content: center; 
-  margin-bottom: 20px; 
+  margin-bottom: 15px; 
 }
+
 .service-icon-box img { 
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .service-content-box { 
-  text-align: absolute; 
+  text-align: absolute;
+  margin-bottom: 20px; 
 }
+
 .service-item-title { 
   margin-top: 14px;
   font-size: clamp(12px, 5vw, 19px); /* Dynamic font size */
