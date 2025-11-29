@@ -296,11 +296,13 @@ url = "https://github.com/GoodbyeKittyy/Random-Forest-Classification-with-Python
 [[project]]
 title = "Tank Survival"
 category = "Game Development"
+subcategory = "Academic"  # ADD THIS LINE
 image = "./config/assets/projects/tank.png"
 url = "https://github.com/GoodbyeKittyy/Tank-Survival-Game/tree/master"
 
 [[project]]
 title = "Cookie Clicker"
 category = "Game Development"
+subcategory = "Professional"  # ADD THIS LINE
 image = "./config/assets/projects/cookie.png"
 url = "https://github.com/GoodbyeKittyy/Cookie-Clicker-Replica/tree/master"
