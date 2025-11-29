@@ -915,7 +915,7 @@ main {
   padding: 12px 16px;
   border: 1px solid var(--jet);
   border-radius: 14px;
-  font-size: var(--fs-6);
+  font-size: var(--fs-2);
   font-weight: var(--fw-300);
 }
 
@@ -945,7 +945,7 @@ main {
 .select-item button {
   background: var(--eerie-black-2);
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: var(--fs-2);
   font-weight: var(--fw-300);
   text-transform: capitalize;
   width: 100%;
