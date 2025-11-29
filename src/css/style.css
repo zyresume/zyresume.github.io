@@ -554,11 +554,12 @@ main {
 }
 .service-icon-box { 
   display: flex;
-  justify-content: center; 
+  justify-content: center;
+  margin-left: 8px;
 }
 
 .service-icon-box img { 
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .service-content-box { 
   text-align: absolute;
