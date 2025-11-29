@@ -899,6 +899,8 @@ main {
 .filter-list { display: none; }
 
 .filter-select-box {
+  max-width: 50%;
+  margin-left: 0;
   position: relative;
   margin-bottom: 25px;
 }
