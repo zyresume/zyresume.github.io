@@ -1,6 +1,14 @@
 [[post]]
 category = "Various Courses"
 title = "Udemy"
+subtitle = "5 Specializations earned. Includes topics for Six Sigma, IT Scrum, AI Workflow, Data Analytics provided by established vendors such as Google, IBM and Kennesaw State University"
+datetime = "2024"
+image = "./config/assets/posts/coursera.jpg"
+url = "https://drive.google.com/drive/folders/1050URrJ-EYLJJxkelCzSqEbcTJMcrWVB?usp=drive_link"
+
+[[post]]
+category = "Various Courses"
+title = "Udemy"
 subtitle = "Over 15 certificates earned. Includes topics for Excel, VBA, SAP, Quality Management, Supply Chain Management and Industry 4.0"
 datetime = "2023"
 image = "./config/assets/posts/udemy.png"
