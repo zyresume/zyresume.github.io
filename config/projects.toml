@@ -5,6 +5,12 @@ image = "./config/assets/projects/awards.jpg"
 url = "https://drive.google.com/drive/folders/1pCDfs-Pzc30kWDXU_EA7zswG5MTN4lQD?usp=sharing"
 
 [[project]]
+title = "Testimonial from STMicroelectronics Pte Ltd"
+category = "Awards & Testimonials"
+image = "./config/assets/projects/stmicroelectronics.png"
+url = "https://drive.google.com/uc?export=download&id=1uIDJAub-okg0zVWgUEQ12lYikx_OYKf7"
+
+[[project]]
 title = "Testimonial from Republic Polytechnic (Centre of Innovation)"
 category = "Awards & Testimonials"
 image = "./config/assets/projects/rp.jpg"
