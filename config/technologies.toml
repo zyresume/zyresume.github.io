@@ -32,8 +32,6 @@ skills = [
     "VBA",
     "VB",
     "VBScript",
-    "F#",
-    "Q#"
 ]
 
 [[categories.sections]]
@@ -84,16 +82,11 @@ columns = 3
 skills = [
     "Objective-C",
     "C--",
-    "C*",
-    "Cython",
     "Assembly",
     "ActionScript",
     "Pascal",
     "Ada",
-    "PowerShell",
-    "UnrealScript",
-    "GDScript",
-    "Scratch"
+    "PowerShell"
 ]
 
 [[categories.sections]]
@@ -104,10 +97,7 @@ skills = [
     "T-SQL",
     "PL/SQL",
     "PL/pgSQL",
-    "MQL",
-    "LINQ",
-    "MDX",
-    "Q (kdb+)"
+    "MQL"
 ]
 
 [[categories]]
@@ -173,9 +163,7 @@ skills = [
     "Spring Boot",
     ".NET Core",
     "ASP.NET",
-    "Laravel",
     "Ruby on Rails",
-    "NestJS",
     "Gin (Go)",
     "Fiber (Go)",
     ""
@@ -192,9 +180,7 @@ skills = [
     "Angular",
     "Svelte",
     "SvelteKit",
-    "Solid.js",
-    "Remix",
-    "Astro"
+    "Solid.js"
 ]
 
 [[categories.sections]]
