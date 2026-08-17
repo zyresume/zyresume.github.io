@@ -38,246 +38,246 @@ url = "https://drive.google.com/file/d/18qfuGxKRcbjC3CN8hwKeckagqtAgf6iB/view?us
 title = "Backorder Trend Forecasting"
 category = "3D Supply Chain Simulation"
 image = "./config/assets/projects/backorder.png"
-url = "https://github.com/GoodbyeKittyy/Backorder-Trend-Forecasting"
+url = "https://github.com/zybuilds/Backorder-Trend-Forecasting"
 
 [[project]]
 title = "Order to Delivery KPI Simulation"
 category = "3D Supply Chain Simulation"
 image = "./config/assets/projects/kpi.png"
-url = "https://github.com/GoodbyeKittyy/Order-Creation-to-Delivery-KPI-Simulation"
+url = "https://github.com/zybuilds/Order-Creation-to-Delivery-KPI-Simulation"
 
 [[project]]
 title = "Processor Gantt Chart"
 category = "3D Supply Chain Simulation"
 image = "./config/assets/projects/gantt.png"
-url = "https://github.com/GoodbyeKittyy/Processor-Gantt-Chart"
+url = "https://github.com/zybuilds/Processor-Gantt-Chart"
 
 [[project]]
 title = "Pallet Mole FIFO System" 
 category = "3D Supply Chain Simulation"
 image = "./config/assets/projects/palletmole.png"
-url = "https://github.com/GoodbyeKittyy/Scalable-Pallet-Mole-FIFO-System"
+url = "https://github.com/zybuilds/Scalable-Pallet-Mole-FIFO-System"
 
 [[project]]
 title = "Warehouse Container Optimization"
 category = "3D Supply Chain Simulation"
 image = "./config/assets/projects/container.png"
-url = "https://github.com/GoodbyeKittyy/Advanced-Warehouse-Container-Fulfillment-Optimizer"
+url = "https://github.com/zybuilds/Advanced-Warehouse-Container-Fulfillment-Optimizer"
 
 [[project]]
 title = "Elevator Shuttle Rack System"
 category = "3D Supply Chain Simulation"
 image = "./config/assets/projects/elevator.png"
-url = "https://github.com/GoodbyeKittyy/Shuttle-Rack-System-With-Elevator"
+url = "https://github.com/zybuilds/Shuttle-Rack-System-With-Elevator"
 
 [[project]]
 title = "Vertical Conveyor"
 category = "3D Blueprints & Architecture"
 image = "./config/assets/projects/verticalconveyor.jpg"
-url = "https://github.com/GoodbyeKittyy/3D-Vertical-Conveyor-Design"
+url = "https://github.com/zybuilds/3D-Vertical-Conveyor-Design"
 
 [[project]]
 title = "Warehouse"
 category = "3D Blueprints & Architecture"
 image = "./config/assets/projects/warehouse.jpg"
-url = "https://github.com/GoodbyeKittyy/3D-Warehouse-Design"
+url = "https://github.com/zybuilds/3D-Warehouse-Design"
 
 [[project]]
 title = "Office"
 category = "3D Blueprints & Architecture"
 image = "./config/assets/projects/office.jpg"
-url = "https://github.com/GoodbyeKittyy/3D-Office-Design"
+url = "https://github.com/zybuilds/3D-Office-Design"
 
 [[project]]
 title = "Clinic"
 category = "3D Blueprints & Architecture"
 image = "./config/assets/projects/clinic.jpg"
-url = "https://github.com/GoodbyeKittyy/3D-Clinic-Design"
+url = "https://github.com/zybuilds/3D-Clinic-Design"
 
 [[project]]
 title = "Business Intelligence (Finance, Sales, Marketing, Supply Chain & Executive)"
 category = "Dashboards"
 image = "./config/assets/projects/intelligence.png"
-url = "https://github.com/GoodbyeKittyy/Business-Intelligence-Dashboard"
+url = "https://github.com/zybuilds/Business-Intelligence-Dashboard"
 
 [[project]]
 title = "Supply Chain Geographical Analysis (Python Integration)"
 category = "Dashboards"
 image = "./config/assets/projects/geographical.png"
-url = "https://github.com/GoodbyeKittyy/Supply-Chain-Geographical-Analysis-Dashboard-With-Python-Integration"
+url = "https://github.com/zybuilds/Supply-Chain-Geographical-Analysis-Dashboard-With-Python-Integration"
 
 
 [[project]]
 title = "Inventory Management"
 category = "Dashboards"
 image = "./config/assets/projects/inventory.png"
-url = "https://github.com/GoodbyeKittyy/Inventory-Management-Dashboard"
+url = "https://github.com/zybuilds/Inventory-Management-Dashboard"
 
 [[project]]
 title = "Quality Management"
 category = "Dashboards"
 image = "./config/assets/projects/quality.png"
-url = "https://github.com/GoodbyeKittyy/Quality-Management-Dashboard"
+url = "https://github.com/zybuilds/Quality-Management-Dashboard"
 
 [[project]]
 title = "Customer Sales"
 category = "Dashboards"
 image = "./config/assets/projects/customer.png"
-url = "https://github.com/GoodbyeKittyy/Customer-Sales-Dashboard"
+url = "https://github.com/zybuilds/Customer-Sales-Dashboard"
 
 [[project]]
 title = "HR Statistics"
 category = "Dashboards"
 image = "./config/assets/projects/hr.png"
-url = "https://github.com/GoodbyeKittyy/HR-Statistics-Dashboard"
+url = "https://github.com/zybuilds/HR-Statistics-Dashboard"
 
 [[project]]
 title = "Order Management"
 category = "Databases"
 image = "./config/assets/projects/order.png"
-url = "https://github.com/GoodbyeKittyy/SQL-Integrated-Order-Management-System"
+url = "https://github.com/zybuilds/SQL-Integrated-Order-Management-System"
 
 [[project]]
 title = "Invoice Blling Management"
 category = "Databases"
 image = "./config/assets/projects/billing.png"
-url = "https://github.com/GoodbyeKittyy/Time-and-Billing-Management-Database"
+url = "https://github.com/zybuilds/Time-and-Billing-Management-Database"
 
 [[project]]
 title = "Accounts Ledger Management"
 category = "Databases"
 image = "./config/assets/projects/ledger.png"
-url = "https://github.com/GoodbyeKittyy/Accounts-Ledger-Database"
+url = "https://github.com/zybuilds/Accounts-Ledger-Database"
 
 [[project]]
 title = "Loan Amortization Management"
 category = "Databases"
 image = "./config/assets/projects/amortization.png"
-url = "https://github.com/GoodbyeKittyy/Loan-Amortization-Database"
+url = "https://github.com/zybuilds/Loan-Amortization-Database"
 
 [[project]]
 title = "Personnel Leave Management"
 category = "Databases"
 image = "./config/assets/projects/staffleave.png"
-url = "https://github.com/GoodbyeKittyy/SQL-Integrated-Staff-Leave-Database"
+url = "https://github.com/zybuilds/SQL-Integrated-Staff-Leave-Database"
 
 [[project]]
 title = "Membership History Management"
 category = "Databases"
 image = "./config/assets/projects/membership.png"
-url = "https://github.com/GoodbyeKittyy/Membership-Event-History-Database"
+url = "https://github.com/zybuilds/Membership-Event-History-Database"
 
 [[project]]
 title = "Triple Exponential Smoothing Forecasting"
 category = "Spreadsheets"
 image = "./config/assets/projects/tripleexpo.png"
-url = "https://github.com/GoodbyeKittyy/Triple-Exponential-Smoothing-Forecasting-Method"
+url = "https://github.com/zybuilds/Triple-Exponential-Smoothing-Forecasting-Method"
 
 [[project]]
 title = "Various Forecasting Templates "
 category = "Spreadsheets"
 image = "./config/assets/projects/forecasting.png"
-url = "https://github.com/GoodbyeKittyy/Various-Forecasting-Templates"
+url = "https://github.com/zybuilds/Various-Forecasting-Templates"
 
 [[project]]
 title = "Delivery Order and Invoice Data Extractor"
 category = "Spreadsheets"
 image = "./config/assets/projects/doinvoice.png"
-url = "https://github.com/GoodbyeKittyy/Delivery-Order-and-Invoice-Automated-Compiler"
+url = "https://github.com/zybuilds/Delivery-Order-and-Invoice-Automated-Compiler"
 
 [[project]]
 title = "Accounting Excel VBA Projects"
 category = "Spreadsheets"
 image = "./config/assets/projects/accounting.png"
-url = "https://github.com/GoodbyeKittyy/Accounting-Excel-and-VBA-Work-History"
+url = "https://github.com/zybuilds/Accounting-Excel-and-VBA-Work-History"
 
 [[project]]
 title = "Report Automation"
 category = "Spreadsheets"
 image = "./config/assets/projects/report.png"
-url = "https://github.com/GoodbyeKittyy/Report-Automation-with-VBA"
+url = "https://github.com/zybuilds/Report-Automation-with-VBA"
 
 [[project]]
 title = "Smart Attendance Manager"
 category = "Spreadsheets"
 image = "./config/assets/projects/smartattendance.png"
-url = "https://github.com/GoodbyeKittyy/Smart-Attendance-Manager"
+url = "https://github.com/zybuilds/Smart-Attendance-Manager"
 
 [[project]]
 title = "Container Freight and Warehousing Services Website"
 category = "Web Development"
 image = "./config/assets/projects/freight.png"
-url = "https://github.com/GoodbyeKittyy/Container-Freight-and-Warehousing-Services-Website-Template"
+url = "https://github.com/zybuilds/Container-Freight-and-Warehousing-Services-Website-Template"
 
 [[project]]
 title = "Hotel Website"
 category = "Web Development"
 image = "./config/assets/projects/hotel.png"
-url = "https://github.com/GoodbyeKittyy/Hotel-Website-Template"
+url = "https://github.com/zybuilds/Hotel-Website-Template"
 
 
 [[project]]
 title = "Banking Website"
 category = "Web Development"
 image = "./config/assets/projects/banking.png"
-url = "https://github.com/GoodbyeKittyy/Banking-Website-Template"
+url = "https://github.com/zybuilds/Banking-Website-Template"
 
 [[project]]
 title = "Interior Design"
 category = "Web Development"
 image = "./config/assets/projects/interior.png"
-url = "https://github.com/GoodbyeKittyy/Interior-Design-Website"
+url = "https://github.com/zybuilds/Interior-Design-Website"
 
 [[project]]
 title = "Healthy Meal Prep Website"
 category = "Web Development"
 image = "./config/assets/projects/food.png"
-url = "https://github.com/GoodbyeKittyy/Healthy-Meal-Prep-Website-Template"
+url = "https://github.com/zybuilds/Healthy-Meal-Prep-Website-Template"
 
 [[project]]
 title = "Clothing Brand Website"
 category = "Web Development"
 image = "./config/assets/projects/clothing.png"
-url = "https://github.com/GoodbyeKittyy/Clothing-Brand-Website"
+url = "https://github.com/zybuilds/Clothing-Brand-Website"
 
 
 [[project]]
 title = "Ecommerce Website"
 category = "Web Development"
 image = "./config/assets/projects/ecomm.png"
-url = "https://github.com/GoodbyeKittyy/Ecommerce-Website-Template"
+url = "https://github.com/zybuilds/Ecommerce-Website-Template"
 
 
 [[project]]
 title = "Portfolio Website"
 category = "Web Development"
 image = "./config/assets/projects/portfolio.png"
-url = "https://github.com/GoodbyeKittyy/Portfolio-Website-Template"
+url = "https://github.com/zybuilds/Portfolio-Website-Template"
 
 
 [[project]]
 title = "IBM Blockchain Software Development Kit"
 category = "Software & API"
 image = "./config/assets/projects/ibm.png"
-url = "https://github.com/GoodbyeKittyy/IBM-Blockchain-SDK-Prototype"
+url = "https://github.com/zybuilds/IBM-Blockchain-SDK-Prototype"
 
 [[project]]
 title = "RFID Sensor Prototype"
 category = "Software & API"
 image = "./config/assets/projects/rfid.png"
-url = "https://github.com/GoodbyeKittyy/RFID-Sensor-Prototype"
+url = "https://github.com/zybuilds/RFID-Sensor-Prototype"
 
 [[project]]
 title = "MS Vulnerability Scanner API"
 category = "Software & API"
 image = "./config/assets/projects/scanner.png"
-url = "https://github.com/GoodbyeKittyy/MS-Vulnerability-Scanner-API"
+url = "https://github.com/zybuilds/MS-Vulnerability-Scanner-API"
 
 [[project]]
 title = "POS Accounting and ERP Software"
 category = "Software & API"
 image = "./config/assets/projects/pos.png"
-url = "https://github.com/GoodbyeKittyy/POS-Accounting-and-ERP-Software"
+url = "https://github.com/zybuilds/POS-Accounting-and-ERP-Software"
 
 
 
@@ -285,28 +285,28 @@ url = "https://github.com/GoodbyeKittyy/POS-Accounting-and-ERP-Software"
 title = "Macroeconomic Demand Forecasting (Neural Network)"
 category = "Machine Learning"
 image = "./config/assets/projects/macroeconomic.png"
-url = "https://github.com/GoodbyeKittyy/Macroeconomic-Variable-Demand-Forecasting-Using-Neural-Network-Prototype"
+url = "https://github.com/zybuilds/Macroeconomic-Variable-Demand-Forecasting-Using-Neural-Network-Prototype"
 
 [[project]]
 title = "Data Analytics for End to End Supply Chain"
 category = "Machine Learning"
 image = "./config/assets/projects/endtoend.png"
-url = "https://github.com/GoodbyeKittyy/Data-Analytics-for-End-to-End-Supply-Chain-Management-Prototype"
+url = "https://github.com/zybuilds/Data-Analytics-for-End-to-End-Supply-Chain-Management-Prototype"
 
 [[project]]
 title = "Random Forest Classification (Python and Scikit Learn)"
 category = "Machine Learning"
 image = "./config/assets/projects/random.png"
-url = "https://github.com/GoodbyeKittyy/Random-Forest-Classification-with-Python-and-Scikit-Learn"
+url = "https://github.com/zybuilds/Random-Forest-Classification-with-Python-and-Scikit-Learn"
 
 [[project]]
 title = "Tank Survival"
 category = "Game Development"
 image = "./config/assets/projects/tank.png"
-url = "https://github.com/GoodbyeKittyy/Tank-Survival-Game/tree/master"
+url = "https://github.com/zybuilds/Tank-Survival-Game/tree/master"
 
 [[project]]
 title = "Cookie Clicker"
 category = "Game Development"
 image = "./config/assets/projects/cookie.png"
-url = "https://github.com/GoodbyeKittyy/Cookie-Clicker-Replica/tree/master"
+url = "https://github.com/zybuilds/Cookie-Clicker-Replica/tree/master"
